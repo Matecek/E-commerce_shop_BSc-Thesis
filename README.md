@@ -1,1 +1,1 @@
-# Praca
+# Praca Inżynierska
