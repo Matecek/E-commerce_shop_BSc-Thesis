@@ -1,0 +1,12 @@
+body {
+    --font-size-default: 16px;
+    --font-family-default: "Roboto", "Lato", sans-serif;
+
+    --color-text-default: #000000;
+    --color-text-grey: #747474;
+    --color-yellow: #ffff00;
+    --color-white: #ffffff;
+    --color-grey: #d4d4d4;
+    --color-theme-main: #ef8f00;
+    --color-price: #ff0000;
+}
