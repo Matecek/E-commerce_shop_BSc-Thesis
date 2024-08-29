@@ -3,10 +3,10 @@ body {
     --font-family-default: "Roboto", "Lato", sans-serif;
 
     --color-text-default: #000000;
-    --color-text-grey: #747474;
+    --color-text-grey: #5d5d5d;
     --color-orange: #ff9900;
     --color-white: #ffffff;
     --color-grey: #d4d4d4;
-    --color-theme-main: #ef8f00;
+    --color-theme-main: #ffa319;
     --color-price: #ff0000;
 }
