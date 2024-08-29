@@ -1,10 +1,12 @@
+import styles from "./MenuIcon.module.css";
 import { Link } from "react-router-dom";
+
 import BAG from "../../assets/bag.svg";
 import HEART from "../../assets/heart.svg";
 
 export function MenuIcon() {
     return (
-        <ul>
+        <ul className={styles.menuIcon}>
             <li>
                 <Link to="/ulubione">
                     <img src={HEART} />

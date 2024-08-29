@@ -1,4 +1,9 @@
 .selectCurrency {
     padding: 0.3rem;
     background: #efefef;
+    border-radius: 0.5rem;
+}
+
+.selectCurrency:hover {
+    background: var(--color-theme-main);
 }
