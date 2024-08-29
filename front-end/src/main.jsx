@@ -2,13 +2,13 @@ import "./styles/theme.css";
 import "./styles/global.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainPage } from "./views/MainPage/MainPage.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <MainPage />,
     },
 ]);
 
