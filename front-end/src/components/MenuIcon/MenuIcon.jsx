@@ -1,4 +1,4 @@
-import styles from "./MenuIcon.module.css";
+import style from "./MenuIcon.module.css";
 import { Link } from "react-router-dom";
 
 import BAG from "../../assets/bag.svg";
@@ -8,7 +8,7 @@ export function MenuIcon() {
     const cartList = 2;
 
     return (
-        <ul className={styles.menuIcon}>
+        <ul className={style.menuIcon}>
             <li>
                 <Link to="/ulubione">
                     <img src={HEART} />
@@ -17,7 +17,7 @@ export function MenuIcon() {
             <li>
                 <Link to="/koszyk">
                     <img src={BAG} />
-                    <div className={styles.productsNumber}>{cartList}</div>
+                    <div className={style.productsNumber}>{cartList}</div>
                 </Link>
             </li>
         </ul>

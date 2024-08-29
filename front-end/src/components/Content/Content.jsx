@@ -1,5 +1,5 @@
-import styles from "./Content.module.css";
+import style from "./Content.module.css";
 
 export function Content({ children }) {
-    return <div className={styles.content}>{children}</div>;
+    return <div className={style.content}>{children}</div>;
 }

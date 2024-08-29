@@ -1,5 +1,5 @@
-import styles from "./TopBar.module.css";
+import style from "./TopBar.module.css";
 
 export function TopBar({ children }) {
-    return <div className={styles.topBar}>{children}</div>;
+    return <div className={style.topBar}>{children}</div>;
 }
