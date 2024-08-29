@@ -5,6 +5,8 @@ import BAG from "../../assets/bag.svg";
 import HEART from "../../assets/heart.svg";
 
 export function MenuIcon() {
+    const cartList = 2;
+
     return (
         <ul className={styles.menuIcon}>
             <li>
@@ -15,6 +17,7 @@ export function MenuIcon() {
             <li>
                 <Link to="/koszyk">
                     <img src={BAG} />
+                    <div className={styles.productsNumber}>{cartList}</div>
                 </Link>
             </li>
         </ul>
