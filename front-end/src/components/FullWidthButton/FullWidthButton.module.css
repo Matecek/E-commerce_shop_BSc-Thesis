@@ -1,0 +1,18 @@
+.fullWidthButton {
+    border: none;
+    background: none;
+
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    background-color: var(--color-theme-main);
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fullWidthButton:hover {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}

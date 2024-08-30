@@ -1,5 +1,6 @@
 import style from "./Hero.module.css";
 import { CenterContent } from "../CenterContent/CenterContent";
+import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 
 export function Hero({ heroImage }) {
     return (
@@ -8,10 +9,10 @@ export function Hero({ heroImage }) {
             style={{ backgroundImage: `url(${heroImage})` }}
         >
             <CenterContent>
-                <div>
+                <div className={style.contentWrapper}>
                     <h2>Back to schools -70%!</h2>
                     <p>Na wybrane produkty</p>
-                    <button>Zobacz</button>
+                    <FullWidthButton>Zobacz</FullWidthButton>
                 </div>
             </CenterContent>
         </div>
