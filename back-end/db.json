@@ -1,15 +1,16 @@
 {
     "women": {
-        "bestsellers": [
+        "news": [
             {
                 "id": 26,
                 "gender": "women",
                 "category": "obuwie",
-                "subcategory": "eleganckie",
-                "productName": "Szpilki",
+                "subcategory": "sneakersy",
+                "productName": "Sneakersy 1",
                 "brand": "Test producent",
                 "pricePLN": 49,
                 "priceUSD": 10,
+                "priceEUR": 9,
                 "photos": [
                     "http://localhost:3000/product-photos/women-shoes-1.jpg",
                     "http://localhost:3000/product-photos/women-shoes-2.jpg",
@@ -22,11 +23,12 @@
                 "id": 27,
                 "gender": "women",
                 "category": "obuwie",
-                "subcategory": "eleganckie",
-                "productName": "Szpilki 2",
+                "subcategory": "sneakersy",
+                "productName": "Sneakersy 2",
                 "brand": "Inny proucent",
                 "pricePLN": 149,
                 "priceUSD": 39,
+                "priceEUR": 34,
                 "photos": [
                     "http://localhost:3000/product-photos/women-shoes-2.jpg",
                     "http://localhost:3000/product-photos/women-shoes-3.jpg",
@@ -44,6 +46,7 @@
                 "brand": "Sun zi",
                 "pricePLN": 299,
                 "priceUSD": 59,
+                "priceEUR": 49,
                 "photos": [
                     "http://localhost:3000/product-photos/women-sweater-1.jpg",
                     "http://localhost:3000/product-photos/women-trousers-2.jpg",
@@ -61,6 +64,7 @@
                 "brand": "Shin-tzu",
                 "pricePLN": 149,
                 "priceUSD": 39,
+                "priceEUR": 34,
                 "photos": [
                     "http://localhost:3000/product-photos/women-trousers-1.jpg",
                     "http://localhost:3000/product-photos/women-trousers-2.jpg",
@@ -75,12 +79,12 @@
         "heroImageUrl": "http://localhost:3000/product-photos/women.jpg"
     },
     "men": {
-        "bestsellers": [
+        "news": [
             {
                 "id": 1,
                 "gender": "men",
-                "category": "odziez",
-                "subcategory": "koszulki",
+                "category": "obuwie",
+                "subcategory": "trampki",
                 "productName": "T-Shirt",
                 "brand": "Top Brand",
                 "pricePLN": 49,
@@ -150,7 +154,7 @@
         "heroImageUrl": "http://localhost:3000/product-photos/men.jpg"
     },
     "children": {
-        "bestsellers": [
+        "news": [
             {
                 "id": 30,
                 "gender": "children",
@@ -234,6 +238,7 @@
             "brand": "Top Brand",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
                 "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
@@ -247,10 +252,11 @@
             "gender": "men",
             "category": "odziez",
             "subcategory": "koszulki",
-            "productName": "T-Shirt",
+            "productName": "T-Shirt 2",
             "brand": "Top Brand",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
                 "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
@@ -264,10 +270,11 @@
             "gender": "men",
             "category": "odziez",
             "subcategory": "koszulki",
-            "productName": "T-shirt 2",
+            "productName": "T-shirt 3",
             "brand": "Sun Tzu",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
                 "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
@@ -281,10 +288,11 @@
             "gender": "men",
             "category": "odziez",
             "subcategory": "koszulki",
-            "productName": "T-shirt 3",
+            "productName": "T-shirt 4",
             "brand": "Sun Tzu",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
@@ -297,15 +305,16 @@
             "id": 5,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 4",
+            "subcategory": "spodnie",
+            "productName": "Spodnie 1",
             "brand": "Sun Tzu",
             "pricePLN": 129,
             "priceUSD": 39,
+            "priceEUR": 34,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-3.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -314,15 +323,16 @@
             "id": 6,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-Shirt",
-            "brand": "Top Brand",
+            "subcategory": "spodnie",
+            "productName": "Spodnie 2",
+            "brand": "Top Product",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -331,15 +341,16 @@
             "id": 7,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 2",
-            "brand": "Sun Tzu",
+            "subcategory": "spodnie",
+            "productName": "Spodnie 3",
+            "brand": "Sun Zi",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-3.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -348,15 +359,16 @@
             "id": 8,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 3",
-            "brand": "Sun Tzu",
+            "subcategory": "spodnie",
+            "productName": "Spodnie 4",
+            "brand": "Sun Zi",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-3.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -365,15 +377,16 @@
             "id": 9,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 4",
+            "subcategory": "spodnie",
+            "productName": "Spodenki 1",
             "brand": "Sun Tzu",
             "pricePLN": 129,
             "priceUSD": 39,
+            "priceEUR": 34,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -382,15 +395,52 @@
             "id": 10,
             "gender": "men",
             "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-Shirt",
+            "subcategory": "spodnie",
+            "productName": "Spodenki 2",
             "brand": "Top Brand",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
+            "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
+        },
+        {
+            "id": 9,
+            "gender": "men",
+            "category": "odziez",
+            "subcategory": "spodnie",
+            "productName": "Spodenki 3",
+            "brand": "Sun Zi",
+            "pricePLN": 129,
+            "priceUSD": 39,
+            "priceEUR": 34,
+            "photos": [
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
+            "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
+        },
+        {
+            "id": 10,
+            "gender": "men",
+            "category": "odziez",
+            "subcategory": "spodnie",
+            "productName": "Spodenki 4",
+            "brand": "Top Product",
+            "pricePLN": 49,
+            "priceUSD": 10,
+            "priceEUR": 9,
+            "photos": [
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-2.jpg",
+                "http://localhost:3000/product-photos/spodenki-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -398,16 +448,17 @@
         {
             "id": 11,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 2",
-            "brand": "Sun Tzu",
+            "category": "buty",
+            "subcategory": "sneakersy",
+            "productName": "Sneakersy 1",
+            "brand": "Sun Zi",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-2.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -415,16 +466,17 @@
         {
             "id": 12,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 3",
+            "category": "buty",
+            "subcategory": "sneakersy",
+            "productName": "Sneakersy 2",
             "brand": "Sun Tzu",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg"
+                "http://localhost:3000/product-photos/sneakers-men-2.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -432,16 +484,17 @@
         {
             "id": 13,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 4",
-            "brand": "Sun Tzu",
+            "category": "buty",
+            "subcategory": "sneakersy",
+            "productName": "Sneakersy 3",
+            "brand": "Top Brand",
             "pricePLN": 129,
             "priceUSD": 39,
+            "priceEUR": 34,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/sneakers-men-3.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-2.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -449,16 +502,17 @@
         {
             "id": 14,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-Shirt",
-            "brand": "Top Brand",
+            "category": "buty",
+            "subcategory": "sneakersy",
+            "productName": "Sneakersy 4",
+            "brand": "Top Product",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg"
+                "http://localhost:3000/product-photos/sneakers-men-2.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-3.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -466,16 +520,17 @@
         {
             "id": 15,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 2",
+            "category": "buty",
+            "subcategory": "trampki",
+            "productName": "Trampki 1",
             "brand": "Sun Tzu",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/trampki-men-2.jpg",
+                "http://localhost:3000/product-photos/trampki-men-1.jpg",
+                "http://localhost:3000/product-photos/trampki-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -483,16 +538,17 @@
         {
             "id": 16,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 3",
-            "brand": "Sun Tzu",
+            "category": "buty",
+            "subcategory": "trampki",
+            "productName": "Trampki 2",
+            "brand": "Sun Zi",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg"
+                "http://localhost:3000/product-photos/trampki-men-1.jpg",
+                "http://localhost:3000/product-photos/trampki-men-2.jpg",
+                "http://localhost:3000/product-photos/trampki-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -500,16 +556,17 @@
         {
             "id": 17,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 4",
-            "brand": "Sun Tzu",
+            "category": "buty",
+            "subcategory": "trampki",
+            "productName": "Trampki 3",
+            "brand": "Top Product",
             "pricePLN": 129,
             "priceUSD": 39,
+            "priceEUR": 34,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/trampki-men-2.jpg",
+                "http://localhost:3000/product-photos/trampki-men-3.jpg",
+                "http://localhost:3000/product-photos/trampki-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -517,16 +574,17 @@
         {
             "id": 18,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-Shirt",
+            "category": "buty",
+            "subcategory": "trampki",
+            "productName": "Trampki 4",
             "brand": "Top Brand",
             "pricePLN": 49,
             "priceUSD": 10,
+            "priceEUR": 9,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg"
+                "http://localhost:3000/product-photos/trampki-men-1.jpg",
+                "http://localhost:3000/product-photos/trampki-men-2.jpg",
+                "http://localhost:3000/product-photos/trampki-men-3.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -534,16 +592,17 @@
         {
             "id": 19,
             "gender": "men",
-            "category": "odziez",
-            "subcategory": "koszulki",
-            "productName": "T-shirt 2",
+            "category": "buty",
+            "subcategory": "zimowe",
+            "productName": "Buty zimowe 1",
             "brand": "Sun Tzu",
             "pricePLN": 199,
             "priceUSD": 49,
+            "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -558,9 +617,9 @@
             "pricePLN": 199,
             "priceUSD": 49,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -575,9 +634,9 @@
             "pricePLN": 129,
             "priceUSD": 39,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -592,9 +651,9 @@
             "pricePLN": 49,
             "priceUSD": 10,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -609,9 +668,9 @@
             "pricePLN": 199,
             "priceUSD": 49,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -626,9 +685,9 @@
             "pricePLN": 199,
             "priceUSD": 49,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
             "maintenanceInfo": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"
@@ -643,8 +702,8 @@
             "pricePLN": 129,
             "priceUSD": 39,
             "photos": [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-4.jpg"
             ],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
@@ -1423,6 +1482,7 @@
             "brand": "Sun zi",
             "pricePLN": 599,
             "priceUSD": 119,
+
             "photos": [
                 "http://localhost:3000/product-photos/children-trousers-2.jpg",
                 "http://localhost:3000/product-photos/children-trousers-3.jpg",
