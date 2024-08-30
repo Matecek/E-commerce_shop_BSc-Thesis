@@ -23,3 +23,7 @@
 .categoryMenu ul li a:global(.active) {
     color: var(--color-text-grey);
 }
+
+.categoryMenu ul li:first-child {
+    text-transform: uppercase;
+}
