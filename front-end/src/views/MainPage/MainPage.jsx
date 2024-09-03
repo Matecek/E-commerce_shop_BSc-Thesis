@@ -1,6 +1,7 @@
 import { Hero } from "../../components/Hero/Hero";
 import { Layout } from "../../components/Layout/Layout";
 import HERO_IMAGE from "../../assets/hero.jpg";
+import { News } from "../../components/News/News";
 
 export function MainPage() {
     const products = [
@@ -16,7 +17,7 @@ export function MainPage() {
             priceEUR: 9,
             photos: [
                 "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
+                "http://localhost:3000/product-photos/man-t-shirt-2.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
             ],
             description:
@@ -35,9 +36,9 @@ export function MainPage() {
             priceUSD: 10,
             priceEUR: 9,
             photos: [
-                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
+                "http://localhost:3000/product-photos/man-t-shirt-2.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
+                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
             ],
             description:
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
@@ -55,9 +56,9 @@ export function MainPage() {
             priceUSD: 49,
             priceEUR: 44,
             photos: [
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
+                "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
+                "http://localhost:3000/product-photos/man-t-shirt-2.jpg",
             ],
             description:
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
@@ -75,8 +76,8 @@ export function MainPage() {
             priceUSD: 49,
             priceEUR: 44,
             photos: [
+                "http://localhost:3000/product-photos/man-t-shirt-2.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-                "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
                 "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
             ],
             description:
@@ -88,6 +89,7 @@ export function MainPage() {
     return (
         <Layout>
             <Hero heroImage={HERO_IMAGE} />
+            <News products={products} />
         </Layout>
     );
 }
