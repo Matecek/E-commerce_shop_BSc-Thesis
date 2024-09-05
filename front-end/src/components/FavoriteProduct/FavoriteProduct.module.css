@@ -1,7 +1,6 @@
 .favoriteProduct {
     display: flex;
     gap: 3rem;
-
     padding: 1rem 0;
     border-top: solid 1px var(--color-text-grey);
     margin: 0.5rem 0;
@@ -10,19 +9,49 @@
 .favoriteProduct img {
     width: 170px;
     height: 200px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .favoriteProductInfo {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-left: 2rem;
+    flex: 1;
+    margin-right: 2rem;
 }
 
 .brand {
+    display: flex;
+    justify-content: space-between;
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text-black);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.price span {
+    font-weight: normal;
+    color: var(--color-text-grey);
+}
+
+.price p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    flex: 1;
+}
+
+.button button {
+    display: flex;
+    align-items: flex-end;
+    border: none;
+    background: none;
+}
+
+.button button img {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
 }
