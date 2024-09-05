@@ -1,0 +1,56 @@
+.CartProduct {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+    border-top: solid 1px var(--color-text-grey);
+    margin: 0.5rem 0;
+}
+
+.CartProduct img {
+    width: 170px;
+    height: 200px;
+}
+
+.CartProductInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.brand {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.price span {
+    font-weight: normal;
+    color: var(--color-text-grey);
+}
+
+.price p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.button button {
+    display: flex;
+    align-items: flex-end;
+    border: none;
+    background: none;
+}
+
+.button button img {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+}
