@@ -4,9 +4,9 @@ import styles from "../CartProduct/CartProduct.module.css";
 
 export function CartProduct({ product }) {
     return (
-        <div className={styles.CartProduct}>
+        <div className={styles.cartProduct}>
             <img src={product.photos[0]} />
-            <div className={styles.CartProductInfo}>
+            <div className={styles.cartProductInfo}>
                 <div className={styles.brand}>
                     <h3>
                         {product.brand} {product.productName}

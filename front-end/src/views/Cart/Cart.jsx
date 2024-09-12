@@ -1,9 +1,10 @@
+import { CartContainer } from "../../components/CartContainer/CartContainer";
 import { CartProductList } from "../../components/CartProductList/CartProductList";
 import { CartSummary } from "../../components/CartSummary/CartSummary";
 import { Layout } from "../../components/Layout/Layout";
 
 export function Cart() {
-    const CartProducts = [
+    const cartProducts = [
         {
             id: 1,
             gender: "men",
@@ -48,8 +49,10 @@ export function Cart() {
 
     return (
         <Layout>
-            <CartProductList products={CartProducts} />
-            <CartSummary products={CartProducts} />
+            <CartContainer>
+                <CartProductList products={cartProducts} />
+                <CartSummary products={cartProducts} />
+            </CartContainer>
         </Layout>
     );
 }

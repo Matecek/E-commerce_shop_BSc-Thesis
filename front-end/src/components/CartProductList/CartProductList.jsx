@@ -5,7 +5,7 @@ import { CartProduct } from "../CartProduct/CartProduct";
 export function CartProductList({ products }) {
     return (
         <CenterContent>
-            <div className={styles.CartList}>
+            <div className={styles.cartList}>
                 <h2>Koszyk</h2>
                 <div>
                     {products.map((product) => {

@@ -1,5 +1,5 @@
 import styles from "./CartContainer.module.css";
 
-export function CartContainer({ childern }) {
-    return <div className={styles.cartContainer}>{childern}</div>;
+export function CartContainer({ children }) {
+    return <div className={styles.cartContainer}>{children}</div>;
 }

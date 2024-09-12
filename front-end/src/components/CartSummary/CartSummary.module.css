@@ -1,0 +1,42 @@
+.cartSummary {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 32rem;
+}
+
+.cartSummary h2 {
+    border-bottom: 1px solid red;
+    padding-bottom: 1rem;
+}
+
+.cartRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartSummaryRow {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.deliveryInfo {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--color-grey);
+}
+
+.deliveryInfoImg {
+    display: flex;
+    flex-direction: column;
+}
+
+.deliveryInfoP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-left: 0.7rem;
+}
