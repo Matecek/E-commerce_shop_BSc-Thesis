@@ -1,10 +1,8 @@
-import { CartProductList } from "../../components/CartProductList/CartProductList";
-import { CartSummary } from "../../components/CartSummary/CartSummary";
-import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { Layout } from "../../components/Layout/Layout";
+import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 
-export function Cart() {
-    const cartProducts = [
+export function ProductsList() {
+    const favoriteProducts = [
         {
             id: 1,
             gender: "men",
@@ -49,10 +47,7 @@ export function Cart() {
 
     return (
         <Layout>
-            <FlexContainer>
-                <CartProductList products={cartProducts} />
-                <CartSummary products={cartProducts} />
-            </FlexContainer>
+            <FlexContainer></FlexContainer>
         </Layout>
     );
 }
