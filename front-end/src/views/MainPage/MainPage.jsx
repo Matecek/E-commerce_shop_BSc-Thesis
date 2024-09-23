@@ -1,7 +1,7 @@
 import { Hero } from "../../components/Hero/Hero";
 import { Layout } from "../../components/Layout/Layout";
 import HERO_IMAGE from "../../assets/hero.jpg";
-import { News } from "../../components/News/News";
+import { Products } from "../../components/Products/Products";
 
 export function MainPage() {
     const products = [
@@ -89,7 +89,7 @@ export function MainPage() {
     return (
         <Layout>
             <Hero heroImage={HERO_IMAGE} />
-            <News products={products} />
+            <Products headerText="Sprawdź nasze nowości" products={products} />
         </Layout>
     );
 }

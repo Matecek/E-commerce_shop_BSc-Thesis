@@ -1,12 +1,12 @@
 import { CenterContent } from "../CenterContent/CenterContent";
 import { Product } from "../Product/Product";
 
-import styles from "./News.module.css";
+import styles from "./Products.module.css";
 
-export function News({ products }) {
+export function Products({ products, headerText }) {
     return (
         <CenterContent>
-            <h2 className={styles.newsHeader}>Sprawdź nasze nowości</h2>
+            <h2 className={styles.newsHeader}>{headerText}</h2>
             <div className={styles.productsWrapper}>
                 {products.map((product) => {
                     return <Product key={product.id} product={product} />;

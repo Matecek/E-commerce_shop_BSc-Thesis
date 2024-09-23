@@ -5,5 +5,7 @@
 
 .productsWrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
