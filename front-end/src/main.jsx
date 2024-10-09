@@ -13,6 +13,8 @@ import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
 import { Error } from "./views/Error/Error";
 import { ProductsList } from "./views/ProductsList/ProductsList";
+import { mainPageLoader } from "./api/mainPageLoader";
+import { productListLoader } from "./api/productListloader";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "", //ścieżka do strony głównej
+                element: <MainPage />,
                 loader: () => redirect("/home"),
             },
             {
@@ -35,25 +38,12 @@ const router = createBrowserRouter([
             {
                 path: "/:gender",
                 element: <MainPage />, //ścieżka do strony głównej
-                loader: ({ params }) => {
-                    const PATH_TO_ENDPOINT_MAPPING = {
-                        kobiety: "women",
-                        mezczyzni: "men",
-                        dzieci: "children",
-                        home: "news",
-                    };
-
-                    const backEndPath = PATH_TO_ENDPOINT_MAPPING[params.gender];
-                    if (backEndPath) {
-                        return fetch(`http://localhost:3000/${backEndPath}`);
-                    } else {
-                        return redirect("/"); //zabezpieczenie przed niepoprawnymi ścieżkami
-                    }
-                },
+                loader: mainPageLoader,
             },
             {
                 path: "/:gender/:category", //ścieżka do kategorii
                 element: <ProductsList />,
+                loader: productListLoader,
             },
         ],
     },

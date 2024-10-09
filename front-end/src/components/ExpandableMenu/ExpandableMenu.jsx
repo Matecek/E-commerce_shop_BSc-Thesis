@@ -4,12 +4,18 @@ import ARROW_ICON from "../../assets/arrow.svg";
 
 import styles from "./ExpandableMenu.module.css";
 
+const PATH_TO_GENDER_NAME = {
+    kobiety: "Kobieta",
+    mezczyzni: "Mężczyzna",
+    dzieci: "Dziecko",
+};
+
 export function ExpandableMenu() {
     const params = useParams();
     const activePath = params.category;
     return (
         <div className={styles.expandableMenu}>
-            <p>Mężczyzna</p>
+            <p>{PATH_TO_GENDER_NAME[params.gender]}</p>
             <ul>
                 {CATEGORIES.map((category) => {
                     return (

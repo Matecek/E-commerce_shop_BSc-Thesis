@@ -1,5 +1,9 @@
 export const GENDERS = [
     {
+        categoryName: "Nowości",
+        path: "nowosci",
+    },
+    {
         categoryName: "Mężczyźni",
         path: "mezczyzni",
     },
@@ -14,10 +18,6 @@ export const GENDERS = [
 ];
 
 export const CATEGORIES = [
-    {
-        categoryName: "Nowości",
-        path: "nowosci",
-    },
     {
         categoryName: "Buty",
         path: "buty",

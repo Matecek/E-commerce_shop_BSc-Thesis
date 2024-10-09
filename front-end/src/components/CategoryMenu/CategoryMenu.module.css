@@ -24,7 +24,3 @@
     color: var(--color-text-grey);
     font-weight: bold;
 }
-
-.categoryMenu ul li:first-child {
-    text-transform: uppercase;
-}
