@@ -1,0 +1,11 @@
+Funkcje aplikacji:
+
+- dodawanie do koszyka
+- usuwanie z koszyka
+- dodawanie do ulubionych
+- usuwanie z ulubionych 
+- wybieranie kategorii, podkategorii
+- zabezpieszenie przeciwko wpisaniu złego linku
+- error ekran
+- zmiana waluty
+- integracja z backedem
