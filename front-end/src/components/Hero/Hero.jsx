@@ -1,8 +1,13 @@
 import style from "./Hero.module.css";
 import { CenterContent } from "../CenterContent/CenterContent";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
+import { useParams } from "react-router-dom";
 
 export function Hero({ heroImage }) {
+    const params = useParams();
+    if (params.gender === "nowosci") {
+        return null;
+    }
     return (
         <div
             className={style.hero}

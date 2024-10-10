@@ -1,5 +1,5 @@
 .expandableMenu {
-    width: 12rem;
+    min-width: 12rem;
     margin-top: 1rem;
     padding-left: 1rem;
 }

@@ -31,8 +31,8 @@ export const CATEGORIES = [
                 path: "trampki",
             },
             {
-                categoryName: "Buty ziomowe",
-                path: "zimowe,",
+                categoryName: "Buty zimowe",
+                path: "zimowe",
             },
         ],
     },
@@ -46,7 +46,7 @@ export const CATEGORIES = [
             },
             {
                 categoryName: "Spodenie",
-                path: "spodenie",
+                path: "spodnie",
             },
             {
                 categoryName: "Spodenki",
@@ -70,19 +70,19 @@ export const CATEGORIES = [
         subCategory: [
             {
                 categoryName: "Top Brand",
-                path: "top-brand",
+                path: "Top Brand",
             },
             {
                 categoryName: "Sun Tzu",
-                path: "sun-tzu",
+                path: "Sun Tzu",
             },
             {
                 categoryName: "Sun Zi",
-                path: "sun-zi",
+                path: "Sun Zi",
             },
             {
                 categoryName: "Top Product",
-                path: "top-product",
+                path: "Top Product",
             },
         ],
     },

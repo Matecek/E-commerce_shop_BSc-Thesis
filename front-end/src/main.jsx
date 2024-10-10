@@ -36,12 +36,16 @@ const router = createBrowserRouter([
                 element: <Favorite />,
             },
             {
+                path: "/404", //ścieżka do strony błędu
+                element: <Error />,
+            },
+            {
                 path: "/:gender",
                 element: <MainPage />, //ścieżka do strony głównej
                 loader: mainPageLoader,
             },
             {
-                path: "/:gender/:category", //ścieżka do kategorii
+                path: "/:gender/:category/:subcategory?", //ścieżka do kategorii
                 element: <ProductsList />,
                 loader: productListLoader,
             },

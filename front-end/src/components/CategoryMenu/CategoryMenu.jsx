@@ -5,9 +5,6 @@ import style from "./CategoryMenu.module.css";
 
 export function CategoryMenu() {
     const params = useParams();
-    if (params.gender === "nowosci") {
-        return null;
-    }
     if (params.gender === "home") {
         return null;
     }

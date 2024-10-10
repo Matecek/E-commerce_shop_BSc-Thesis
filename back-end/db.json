@@ -2074,7 +2074,7 @@
         },
         {
             "id": 100,
-            "gender": "marki",
+            "gender": "news",
             "category": "odziez",
             "subcategory": "koszulki",
             "productName": "T-shirt 5",
@@ -2083,15 +2083,15 @@
             "priceUSD": 25,
             "priceEUR": 22,
             "photos": [
-                "http://localhost:3000/product-photos/t-shirt-5-1.jpg",
-                "http://localhost:3000/product-photos/t-shirt-5-2.jpg"
+                "http://localhost:3000/product-photos/women-t-shirt-1.jpg",
+                "http://localhost:3000/product-photos/women-t-shirt-2.jpg"
             ],
             "description": "High-quality T-shirt from Brand A.",
             "care": "Machine wash cold, tumble dry low."
         },
         {
             "id": 101,
-            "gender": "marki",
+            "gender": "news",
             "category": "buty",
             "subcategory": "sneakers",
             "productName": "Sneakers 5",
@@ -2100,15 +2100,15 @@
             "priceUSD": 75,
             "priceEUR": 67,
             "photos": [
-                "http://localhost:3000/product-photos/sneakers-5-1.jpg",
-                "http://localhost:3000/product-photos/sneakers-5-2.jpg"
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg",
+                "http://localhost:3000/product-photos/sneakers-men-1.jpg"
             ],
             "description": "Comfortable and stylish sneakers from Brand B.",
             "care": "Wipe clean with a damp cloth."
         },
         {
             "id": 102,
-            "gender": "marki",
+            "gender": "news",
             "category": "akcesoria",
             "subcategory": "torby",
             "productName": "Torba 3",
@@ -2117,15 +2117,15 @@
             "priceUSD": 49,
             "priceEUR": 44,
             "photos": [
-                "http://localhost:3000/product-photos/torba-3-1.jpg",
-                "http://localhost:3000/product-photos/torba-3-2.jpg"
+                "http://localhost:3000/product-photos/man-bag-2.jpg",
+                "http://localhost:3000/product-photos/man-bag-1.jpg"
             ],
             "description": "Stylish and durable bag from Brand C.",
             "care": "Spot clean only."
         },
         {
             "id": 103,
-            "gender": "marki",
+            "gender": "news",
             "category": "odziez",
             "subcategory": "spodnie",
             "productName": "Spodnie 2",
@@ -2134,15 +2134,15 @@
             "priceUSD": 37,
             "priceEUR": 33,
             "photos": [
-                "http://localhost:3000/product-photos/spodnie-2-1.jpg",
-                "http://localhost:3000/product-photos/spodnie-2-2.jpg"
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-2.jpg"
             ],
             "description": "Comfortable pants from Brand D.",
             "care": "Machine wash warm, tumble dry medium."
         },
         {
             "id": 104,
-            "gender": "marki",
+            "gender": "news",
             "category": "buty",
             "subcategory": "zimowe",
             "productName": "Buty zimowe 5",
@@ -2151,8 +2151,59 @@
             "priceUSD": 99,
             "priceEUR": 88,
             "photos": [
-                "http://localhost:3000/product-photos/buty-zimowe-5-1.jpg",
-                "http://localhost:3000/product-photos/buty-zimowe-5-2.jpg"
+                "http://localhost:3000/product-photos/buty-zima-women-1.jpg",
+                "http://localhost:3000/product-photos/buty-zima-women-2.jpg"
+            ],
+            "description": "Warm and durable winter boots from Brand E.",
+            "care": "Wipe clean with a damp cloth."
+        },
+        {
+            "id": 105,
+            "gender": "news",
+            "category": "marki",
+            "subcategory": "Top Brand",
+            "productName": "Torba 3",
+            "brand": "Top Product",
+            "pricePLN": 199,
+            "priceUSD": 49,
+            "priceEUR": 44,
+            "photos": [
+                "http://localhost:3000/product-photos/man-bag-2.jpg",
+                "http://localhost:3000/product-photos/man-bag-1.jpg"
+            ],
+            "description": "Stylish and durable bag from Brand C.",
+            "care": "Spot clean only."
+        },
+        {
+            "id": 106,
+            "gender": "news",
+            "category": "marki",
+            "subcategory": "Top Brand",
+            "productName": "Spodnie 2",
+            "brand": "Top Brand",
+            "pricePLN": 149,
+            "priceUSD": 37,
+            "priceEUR": 33,
+            "photos": [
+                "http://localhost:3000/product-photos/spodnie-men-1.jpg",
+                "http://localhost:3000/product-photos/spodnie-men-3.jpg"
+            ],
+            "description": "Comfortable pants from Brand D.",
+            "care": "Machine wash warm, tumble dry medium."
+        },
+        {
+            "id": 107,
+            "gender": "news",
+            "category": "marki",
+            "subcategory": "Top Brand",
+            "productName": "Buty zimowe 5",
+            "brand": "Top Brand",
+            "pricePLN": 399,
+            "priceUSD": 99,
+            "priceEUR": 88,
+            "photos": [
+                "http://localhost:3000/product-photos/buty-zima-men-2.jpg",
+                "http://localhost:3000/product-photos/buty-zima-men-1.jpg"
             ],
             "description": "Warm and durable winter boots from Brand E.",
             "care": "Wipe clean with a damp cloth."

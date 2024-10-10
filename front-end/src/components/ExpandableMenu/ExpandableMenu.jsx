@@ -22,23 +22,23 @@ export function ExpandableMenu() {
                         <li key={category.path}>
                             <NavLink to={`/${params.gender}/${category.path}`}>
                                 {category.categoryName}{" "}
-                                {category.categoryName !== "Nowości" && (
-                                    <img
-                                        src={ARROW_ICON}
-                                        className={
-                                            activePath === category.path
-                                                ? styles.expanded
-                                                : ""
-                                        }
-                                    />
-                                )}
+                                <img
+                                    src={ARROW_ICON}
+                                    className={
+                                        activePath === category.path
+                                            ? styles.expanded
+                                            : ""
+                                    }
+                                />
                             </NavLink>
                             {activePath === category.path && (
                                 <ul>
                                     {category.subCategory.map((subCategory) => {
                                         return (
                                             <li key={subCategory.path}>
-                                                <NavLink to={subCategory.path}>
+                                                <NavLink
+                                                    to={`/${params.gender}/${params.category}/${subCategory.path}`}
+                                                >
                                                     {subCategory.categoryName}
                                                 </NavLink>
                                             </li>
