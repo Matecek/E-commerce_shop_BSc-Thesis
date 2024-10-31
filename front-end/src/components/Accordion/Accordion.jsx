@@ -10,11 +10,9 @@ export function Accortion({ items }) {
             {items.map((item, index) => {
                 return (
                     <li
-                        key={item.id}
+                        key={item.title}
                         onClick={() => {
-                            setActiveItemIndex(
-                                activeItemIndex === index ? null : index
-                            );
+                            setActiveItemIndex(index);
                         }}
                     >
                         <div className={styles.title}>

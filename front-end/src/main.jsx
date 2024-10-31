@@ -12,9 +12,11 @@ import { Favorite } from "./views/Favorite/Favorite";
 import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
 import { Error } from "./views/Error/Error";
+import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import { ProductsList } from "./views/ProductsList/ProductsList";
 import { mainPageLoader } from "./api/mainPageLoader";
 import { productListLoader } from "./api/productListloader";
+import { productLoader } from "./api/productLoader";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +50,11 @@ const router = createBrowserRouter([
                 path: "/:gender/:category/:subcategory?", //ścieżka do kategorii
                 element: <ProductsList />,
                 loader: productListLoader,
+            },
+            {
+                path: "/:gender/:category/:subcategory/:productId", //ścieżka do produktu
+                element: <ProductDetails />,
+                loader: productLoader,
             },
         ],
     },
