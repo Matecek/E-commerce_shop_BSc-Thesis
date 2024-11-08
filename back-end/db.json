@@ -2335,10 +2335,18 @@
             "care": "Wipe clean with a damp cloth."
         }
     ],
-    "favourites": [
+    "favorites": [
         {
             "productId": 1,
             "id": 1
+        },
+        {
+            "productId": 16,
+            "id": 2
+        },
+        {
+            "productId": 17,
+            "id": 3
         }
     ]
 }
