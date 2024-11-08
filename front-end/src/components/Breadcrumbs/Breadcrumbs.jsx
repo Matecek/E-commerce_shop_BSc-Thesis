@@ -6,7 +6,6 @@ import { CATEGORIES, GENDERS } from "../../const/categories";
 
 export function Breadcrumbs() {
     const { gender, category, subcategory } = useParams();
-    console.log(gender, category, subcategory);
 
     const foundGender = GENDERS.find((g) => g.path === gender);
     const foundCategory = CATEGORIES.find((c) => c.path === category);

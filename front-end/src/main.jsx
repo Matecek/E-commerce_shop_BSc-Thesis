@@ -17,8 +17,13 @@ import { ProductsList } from "./views/ProductsList/ProductsList";
 import { mainPageLoader } from "./api/mainPageLoader";
 import { productListLoader } from "./api/productListloader";
 import { productLoader } from "./api/productLoader";
+import { addProductToFavorites } from "./api/addProductToFavorites";
 
 const router = createBrowserRouter([
+    {
+        path: "/add-to-favorites/:productId", //ścieżka do dodawania produktu do ulubionych
+        action: addProductToFavorites,
+    },
     {
         path: "",
         element: <Layout />,

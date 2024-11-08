@@ -1,4 +1,5 @@
 export const PATH_TO_ENDPOINT_MAPPING = {
+    //Mapowanie ścieżek na endpointy
     nowosci: "news",
     kobiety: "women",
     mezczyzni: "men",
@@ -6,4 +7,4 @@ export const PATH_TO_ENDPOINT_MAPPING = {
     home: "news",
 };
 
-export const BACK_END_URL = "http://localhost:3000";
+export const BACK_END_URL = "http://localhost:3000"; //Adres URL backendu

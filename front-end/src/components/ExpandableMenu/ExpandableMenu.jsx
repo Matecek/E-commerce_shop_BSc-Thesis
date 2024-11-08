@@ -5,6 +5,7 @@ import ARROW_ICON from "../../assets/arrow.svg";
 import styles from "./ExpandableMenu.module.css";
 
 const PATH_TO_GENDER_NAME = {
+    // obiekt, który przypisuje ścieżce nazwę płci
     kobiety: "Kobieta",
     mezczyzni: "Mężczyzna",
     dzieci: "Dziecko",
@@ -17,6 +18,7 @@ export function ExpandableMenu() {
         <div className={styles.expandableMenu}>
             <p>{PATH_TO_GENDER_NAME[params.gender]}</p>
             <ul>
+                {/*mapowanie kategorii*/}
                 {CATEGORIES.map((category) => {
                     return (
                         <li key={category.path}>

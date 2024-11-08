@@ -6,7 +6,7 @@ import { Details } from "../../components/Details/Details";
 import { useLoaderData } from "react-router-dom";
 
 export function ProductDetails() {
-    const product = useLoaderData();
+    const product = useLoaderData(); //Pobranie danych produktu z hooka useLoaderData
 
     return (
         <FlexContainer>

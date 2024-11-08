@@ -7,6 +7,7 @@ export function Photos({ product }) {
     return (
         <FlexContainer>
             <div className={styles.thumbnails}>
+                {/*mapowanie zdjęć produktu*/}
                 {product.photos.map((photo) => {
                     return (
                         <img

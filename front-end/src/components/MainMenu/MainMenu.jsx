@@ -5,6 +5,7 @@ import { GENDERS } from "../../const/categories";
 export function MainMenu() {
     return (
         <ul className={style.mainMenu}>
+            {/* Mapowanie kategorii */}
             {GENDERS.map((category) => {
                 return (
                     <li key={category.path}>

@@ -1,11 +1,12 @@
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
-import { Accortion } from "../Accordion/Accordion";
+import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 
 import styles from "./Details.module.css";
 
 export function Details({ product }) {
+    //Komponent wyświetlający szczegóły produktu
     const accordionContent = [
         {
             title: "Opis",
@@ -32,10 +33,10 @@ export function Details({ product }) {
                 </li>
                 <li>
                     <img src={RETURN} />
-                    Zwrot do 100dni!
+                    Zwrot do 100 dni!
                 </li>
             </ul>
-            <Accortion items={accordionContent} />
+            <Accordion items={accordionContent} />
         </div>
     );
 }

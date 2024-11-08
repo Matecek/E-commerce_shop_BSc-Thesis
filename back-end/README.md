@@ -25,6 +25,7 @@ Elementy zwracane i zapisywane do serwera mają następujące pola:
     "brand": "Top Brand",
     "pricePLN": 49,
     "priceUSD": 10,
+    "priceEUR": 9,
     "photos": [
         "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
         "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
@@ -102,6 +103,7 @@ Konsola:
         brand: "Top Brand",
         pricePLN: 49,
         priceUSD: 10,
+        priceEUR: 9,
         photos: [
             "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
             "http://localhost:3000/product-photos/man-t-shirt-4.jpg",

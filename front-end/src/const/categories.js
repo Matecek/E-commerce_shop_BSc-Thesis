@@ -1,4 +1,5 @@
 export const GENDERS = [
+    //Tablica z kategoriami płci
     {
         categoryName: "Nowości",
         path: "nowosci",
@@ -18,6 +19,7 @@ export const GENDERS = [
 ];
 
 export const CATEGORIES = [
+    //Tablica z kategoriami produktów
     {
         categoryName: "Buty",
         path: "buty",
