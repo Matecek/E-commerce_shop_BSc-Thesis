@@ -18,11 +18,17 @@ import { mainPageLoader } from "./api/mainPageLoader";
 import { productListLoader } from "./api/productListloader";
 import { productLoader } from "./api/productLoader";
 import { addProductToFavorites } from "./api/addProductToFavorites";
+import { favoritesLoader } from "./api/favoritesLoader";
+import { deleteFavoriteProduct } from "./api/deleteFavoriteProduct";
 
 const router = createBrowserRouter([
     {
         path: "/add-to-favorites/:productId", //ścieżka do dodawania produktu do ulubionych
         action: addProductToFavorites,
+    },
+    {
+        path: "/delete-from-favorites/:favoriteId", //ścieżka do usuwania produktu z ulubionych
+        action: deleteFavoriteProduct,
     },
     {
         path: "",
@@ -32,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: "", //ścieżka do strony głównej
                 element: <MainPage />,
-                loader: () => redirect("/home"),
+                loader: () => redirect("/home"), //przekierowanie na stronę główną
             },
             {
                 path: "/koszyk", //ścieżka do koszyka
@@ -41,6 +47,7 @@ const router = createBrowserRouter([
             {
                 path: "/ulubione", //ścieżka do ulubionych
                 element: <Favorite />,
+                loader: favoritesLoader, //ładowanie ulubionych
             },
             {
                 path: "/404", //ścieżka do strony błędu
@@ -49,17 +56,17 @@ const router = createBrowserRouter([
             {
                 path: "/:gender",
                 element: <MainPage />, //ścieżka do strony głównej
-                loader: mainPageLoader,
+                loader: mainPageLoader, //ładowanie strony głównej
             },
             {
                 path: "/:gender/:category/:subcategory?", //ścieżka do kategorii
                 element: <ProductsList />,
-                loader: productListLoader,
+                loader: productListLoader, //ładowanie produktów
             },
             {
                 path: "/:gender/:category/:subcategory/:productId", //ścieżka do produktu
                 element: <ProductDetails />,
-                loader: productLoader,
+                loader: productLoader, //ładowanie produktu
             },
         ],
     },

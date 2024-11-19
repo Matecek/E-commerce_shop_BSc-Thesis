@@ -3,17 +3,17 @@ import { CenterContent } from "../CenterContent/CenterContent";
 
 import styles from "./FavoriteList.module.css";
 
-export function FavoriteList({ products }) {
+export function FavoriteList({ favorites }) {
     return (
         <CenterContent>
             <div className={styles.favoriteList}>
                 <h2>Ulubione</h2>
                 <div>
-                    {products.map((product) => {
+                    {favorites.map((favorite) => {
                         return (
                             <FavoriteProduct
-                                key={product.id}
-                                product={product}
+                                key={favorite.id}
+                                favorite={favorite}
                             />
                         );
                     })}
