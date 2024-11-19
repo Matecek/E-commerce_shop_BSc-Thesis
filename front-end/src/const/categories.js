@@ -89,3 +89,45 @@ export const CATEGORIES = [
         ],
     },
 ];
+
+export const ABOUT = [
+    //Tablica z kategoriami dla stopki
+    {
+        categoryName: "Firma",
+        path: "Firma",
+    },
+    {
+        categoryName: "Newsletter",
+        path: "Newsletter",
+    },
+];
+export const CONTACT = [
+    //Tablica z kategoriami dla stopki
+    {
+        categoryName: "Informacje prawne",
+        path: "info",
+    },
+    {
+        categoryName: "Polityka prywatności",
+        path: "policy",
+    },
+    {
+        categoryName: "Polityka cookies",
+        path: "cookies",
+    },
+];
+export const HELP = [
+    //Tablica z kategoriami dla stopki
+    {
+        categoryName: "FAQ",
+        path: "faq",
+    },
+    {
+        categoryName: "Dostawa i płatność",
+        path: "centrum-informacji",
+    },
+    {
+        categoryName: "Zwroty, wymiany i reklamacje",
+        path: "centrum-informacji",
+    },
+];

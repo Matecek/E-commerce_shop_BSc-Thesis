@@ -14,6 +14,7 @@ import { MainPage } from "./views/MainPage/MainPage";
 import { Error } from "./views/Error/Error";
 import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import { ProductsList } from "./views/ProductsList/ProductsList";
+import { AboutUs } from "./views/AboutUs/AboutUs";
 import { mainPageLoader } from "./api/mainPageLoader";
 import { productListLoader } from "./api/productListloader";
 import { productLoader } from "./api/productLoader";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
                 path: "", //ścieżka do strony głównej
                 element: <MainPage />,
                 loader: () => redirect("/home"), //przekierowanie na stronę główną
+            },
+            {
+                path: "/o nas", //ścieżka do strony o nas
+                element: <AboutUs />,
             },
             {
                 path: "/koszyk", //ścieżka do koszyka
