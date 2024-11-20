@@ -72,19 +72,19 @@ export const CATEGORIES = [
         subCategory: [
             {
                 categoryName: "Top Brand",
-                path: "Top Brand",
+                path: "top-brand",
             },
             {
                 categoryName: "Sun Tzu",
-                path: "Sun Tzu",
+                path: "sun-tzu",
             },
             {
                 categoryName: "Sun Zi",
-                path: "Sun Zi",
+                path: "sun-zi",
             },
             {
                 categoryName: "Top Product",
-                path: "Top Product",
+                path: "top-product",
             },
         ],
     },
@@ -94,11 +94,11 @@ export const ABOUT = [
     //Tablica z kategoriami dla stopki
     {
         categoryName: "Firma",
-        path: "Firma",
+        path: "firma",
     },
     {
         categoryName: "Newsletter",
-        path: "Newsletter",
+        path: "newsletter",
     },
 ];
 export const CONTACT = [
