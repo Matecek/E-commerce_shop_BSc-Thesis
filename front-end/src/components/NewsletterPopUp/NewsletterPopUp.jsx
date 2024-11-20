@@ -10,7 +10,7 @@ export function NewsletterPopUp({ isVisible, onClose }) {
     const [messageType, setMessageType] = useState("");
 
     useEffect(() => {
-        //wyświetlanie okna modalnego z newsletterem
+        // Wyświetlanie okna modalnego z newsletterem
         const hasVisited = localStorage.getItem("hasVisitedHome");
         if (!hasVisited && isVisible) {
             setIsModalVisible(true);
@@ -21,11 +21,17 @@ export function NewsletterPopUp({ isVisible, onClose }) {
     if (!isModalVisible) return null;
 
     const handleSubmit = async (e) => {
-        //obsługa przycisku zapisz się
+        // Obsługa przycisku "Zapisz się"
         e.preventDefault();
         const { success, message } = await subscribeToNewsletter(email);
         setMessage(message);
         setMessageType(success ? "success" : "error");
+
+        // Ukrywanie całego modala po 3 sekundach
+        setTimeout(() => {
+            setIsModalVisible(false);
+            onClose(); // Funkcja do zamknięcia modala przekazywana przez rodzica
+        }, 2000); // Czas po jakim modal zniknie
     };
 
     return (
