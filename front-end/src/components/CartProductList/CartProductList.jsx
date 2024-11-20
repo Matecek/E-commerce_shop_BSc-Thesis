@@ -1,6 +1,7 @@
 import { CenterContent } from "../CenterContent/CenterContent";
-import styles from "../CartProductList/CartProductList.module.css";
 import { CartProduct } from "../CartProduct/CartProduct";
+
+import styles from "../CartProductList/CartProductList.module.css";
 
 export function CartProductList({ products }) {
     return (

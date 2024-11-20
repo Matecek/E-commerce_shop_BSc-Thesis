@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-import style from "./MainMenu.module.css";
 import { GENDERS } from "../../const/categories";
+
+import styles from "./MainMenu.module.css";
 
 export function MainMenu() {
     return (
-        <ul className={style.mainMenu}>
+        <ul className={styles.mainMenu}>
             {/* Mapowanie kategorii */}
             {GENDERS.map((category) => {
                 return (

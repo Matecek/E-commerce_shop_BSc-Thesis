@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ARROW from "../../assets/arrow.svg";
+
 import styles from "./Accordion.module.css";
 
 export function Accordion({ items }) {

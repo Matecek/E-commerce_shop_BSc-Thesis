@@ -1,5 +1,5 @@
-import style from "./CenterContent.module.css";
+import styles from "./CenterContent.module.css";
 
 export function CenterContent({ children }) {
-    return <div className={style.wrapper}>{children}</div>;
+    return <div className={styles.wrapper}>{children}</div>;
 }

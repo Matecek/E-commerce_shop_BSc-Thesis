@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FlexContainer } from "../FlexContainer/FlexContainer";
+
 import styles from "./Photos.module.css";
 
 export function Photos({ product }) {

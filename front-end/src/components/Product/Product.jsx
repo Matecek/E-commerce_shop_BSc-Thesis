@@ -1,4 +1,5 @@
 import { Link, useFetcher } from "react-router-dom";
+
 import styles from "./Product.module.css";
 
 const ENDPOINT_TO_PATH_MAPPING = {

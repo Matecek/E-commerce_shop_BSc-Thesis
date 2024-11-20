@@ -1,8 +1,8 @@
-import style from "./FullWidthButton.module.css";
+import styles from "./FullWidthButton.module.css";
 
 export function FullWidthButton({ children, onClick }) {
     return (
-        <button className={style.fullWidthButton} onClick={onClick}>
+        <button className={styles.fullWidthButton} onClick={onClick}>
             {children}
         </button>
     );

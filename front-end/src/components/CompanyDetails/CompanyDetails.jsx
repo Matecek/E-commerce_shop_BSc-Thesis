@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { CenterContent } from "../CenterContent/CenterContent";
-import style from "./CompanyDetails.module.css";
+
+import styles from "./CompanyDetails.module.css";
 
 export function CompanyDetails() {
     return (
         <CenterContent>
-            <div className={style.companyDetails}>
+            <div className={styles.companyDetails}>
                 <h1>Dane Firmy</h1>
                 <h2>Adres firmy:</h2>
                 <p>MATT</p>
@@ -19,7 +20,7 @@ export function CompanyDetails() {
                 <p>00-000 Xyz</p>
                 <p>Polska</p>
 
-                <NavLink to="/" className={style.link}>
+                <NavLink to="/" className={styles.link}>
                     www.matt.com
                 </NavLink>
             </div>

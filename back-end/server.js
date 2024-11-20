@@ -37,7 +37,7 @@ app.post("/subscribe", (req, res) => {
             // Obsługa błędu
             return res
                 .status(500)
-                .send({ message: "Failed to send email", error });
+                .send({ message: "Coś poszło nie tak.", error });
         }
         res.send({ message: "Email sent successfully!" });
     });

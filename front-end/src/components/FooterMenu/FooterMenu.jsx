@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { ABOUT, CONTACT, HELP } from "../../const/categories";
-import style from "./FooterMenu.module.css";
+
+import styles from "./FooterMenu.module.css";
 
 export function FooterMenu() {
     return (
-        <div className={style.footerMenu}>
+        <div className={styles.footerMenu}>
             <ul>
                 <div>O Matt</div>
                 {/* Mapowanie kategorii */}
