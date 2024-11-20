@@ -22,6 +22,7 @@ import { addProductToFavorites } from "./api/addProductToFavorites";
 import { favoritesLoader } from "./api/favoritesLoader";
 import { deleteFavoriteProduct } from "./api/deleteFavoriteProduct";
 import { Newsletter } from "./views/Newsletter/Newsletter";
+import { CompanyInfo } from "./views/CompanyInfo/CompanyInfo";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             {
                 path: "/newsletter", //ścieżka do newslettera
                 element: <Newsletter />,
+            },
+            {
+                path: "/info", //ścieżka do informacji
+                element: <CompanyInfo />,
             },
             {
                 path: "/koszyk", //ścieżka do koszyka
