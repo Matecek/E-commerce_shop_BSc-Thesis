@@ -25,7 +25,7 @@ app.post("/subscribe", (req, res) => {
 
     const mailOptions = {
         // Konfiguracja wiadomości e-mail
-        from: "mateusz.wojtas777@gmail.com",
+        from: "MATT.com <mateusz.wojtas777@gmail.com>",
         to: email,
         subject: "Dodano cię do naszego Newslettera!",
         html: `
