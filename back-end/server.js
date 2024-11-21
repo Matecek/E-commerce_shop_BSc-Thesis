@@ -58,7 +58,8 @@ app.post("/subscribe", (req, res) => {
         transporter.sendMail(mailOptions, (error) => {
             if (error) {
                 return res.status(500).send({
-                    message: "Nie udało się wysłać wiadomości e-mail.",
+                    message:
+                        "Nie udało się wysłać wiadomości e-mail. Spróbuj ponownie.",
                     error,
                 });
             }
