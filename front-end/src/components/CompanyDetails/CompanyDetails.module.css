@@ -5,7 +5,7 @@
     justify-content: start;
     border-top: 2px solid var(--color-theme-main);
     padding-left: 10%;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
 }
 
 .companyDetails h1 {
