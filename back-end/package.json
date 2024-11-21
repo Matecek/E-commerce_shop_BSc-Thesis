@@ -10,8 +10,10 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "json-server": "^0.17.3",
-        "nodemailer": "^6.9.16"
+        "nodemailer": "^6.9.16",
+        "twilio": "^5.3.6"
     }
 }

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { subscribeToNewsletter } from "../../api/sendNewsletter";
-
 import styles from "./NewsletterPopUp.module.css";
 
 export function NewsletterPopUp({ isVisible, onClose }) {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [email, setEmail] = useState("");
+    //const [phone, setPhone] = useState("");
+    //const [regionCode, setRegionCode] = useState("+48"); // Domyślny kod kraju
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
 
@@ -23,15 +24,20 @@ export function NewsletterPopUp({ isVisible, onClose }) {
     const handleSubmit = async (e) => {
         // Obsługa przycisku "Zapisz się"
         e.preventDefault();
-        const { success, message } = await subscribeToNewsletter(email);
+        //const fullPhoneNumber = phone ? `${regionCode}${phone}` : "";
+        const { success, message } = await subscribeToNewsletter(
+            email
+            //fullPhoneNumber
+        );
         setMessage(message);
         setMessageType(success ? "success" : "error");
 
-        // Ukrywanie całego modala po 3 sekundach
-        setTimeout(() => {
-            setIsModalVisible(false);
-            onClose(); // Funkcja do zamknięcia modala przekazywana przez rodzica
-        }, 2000); // Czas po jakim modal zniknie
+        if (success) {
+            setTimeout(() => {
+                setIsModalVisible(false);
+                onClose();
+            }, 2000);
+        }
     };
 
     return (
@@ -52,11 +58,32 @@ export function NewsletterPopUp({ isVisible, onClose }) {
                     </p>
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <input
-                            type="text"
+                            type="email"
                             placeholder="Podaj swój adres e-mail"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        {/* <div className={styles.phoneInput}>
+                            {/* <select
+                                value={regionCode}
+                                onChange={(e) => setRegionCode(e.target.value)}
+                                className={styles.regionCode}
+                            >
+                                <option value="+48">🇵🇱 +48</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+39">🇮🇹 +39</option>
+                                
+                            </select>
+                            <input
+                                type="tel"
+                                placeholder="Podaj swój numer telefonu"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
+                        </div> */}
                         <button type="submit">Zapisz się</button>
                     </form>
                     {message && (

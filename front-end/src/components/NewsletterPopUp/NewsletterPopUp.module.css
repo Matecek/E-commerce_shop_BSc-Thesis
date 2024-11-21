@@ -35,16 +35,16 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    gap: 1rem;
+    width: 100%;
 }
 
 .form form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     width: 100%;
+    gap: 1rem;
 }
 
 .form input {
@@ -52,13 +52,29 @@
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 50%;
+    width: 80%;
     text-align: center;
+}
+
+.phoneInput {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+}
+
+.regionCode {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 0.7rem;
+    width: 20%;
 }
 
 .form button {
     padding: 10px 20px;
-    width: 30%;
+    width: 50%;
     background-color: var(--color-theme-main);
     color: white;
     border-radius: 4px;

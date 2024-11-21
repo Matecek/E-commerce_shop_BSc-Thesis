@@ -3,7 +3,3 @@
     background: #f7f7f7;
     border-radius: 0.5rem;
 }
-
-.selectCurrency:hover {
-    background: var(--color-theme-main);
-}
