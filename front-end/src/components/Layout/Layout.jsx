@@ -7,6 +7,9 @@ import { MainMenu } from "../MainMenu/MainMenu";
 import { MenuIcon } from "../MenuIcon/MenuIcon";
 import { SelectCurrency } from "../SelectCurrency/SelectCurrency";
 import { TopBar } from "../TopBar/TopBar";
+import { CurrencyContext } from "../../contexts/CurrencyContect";
+import { useState } from "react";
+import { CURRENCY } from "../../const/currency";
 
 export function Layout() {
     const location = useLocation();
@@ -17,21 +20,27 @@ export function Layout() {
         "/nowosci",
     ].some((path) => location.pathname.startsWith(path));
 
+    const [currency, setCurrency] = useState(
+        localStorage["currency"] || CURRENCY.PLN
+    );
+
     return (
         <>
-            <Content>
-                <TopBar>
-                    <Logo />
-                    <MainMenu />
-                    <div>
-                        <SelectCurrency />
-                        <MenuIcon />
-                    </div>
-                </TopBar>
-                {showCategoryMenu && <CategoryMenu />}
-                <Outlet />
-            </Content>
-            <Footer />
+            <CurrencyContext.Provider value={[currency, setCurrency]}>
+                <Content>
+                    <TopBar>
+                        <Logo />
+                        <MainMenu />
+                        <div>
+                            <SelectCurrency />
+                            <MenuIcon />
+                        </div>
+                    </TopBar>
+                    {showCategoryMenu && <CategoryMenu />}
+                    <Outlet />
+                </Content>
+                <Footer />
+            </CurrencyContext.Provider>
         </>
     );
 }

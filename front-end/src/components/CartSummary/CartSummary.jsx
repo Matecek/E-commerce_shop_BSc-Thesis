@@ -2,16 +2,40 @@ import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import TIME from "../../assets/time.svg";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/CurrencyContect";
 
 import styles from "./CartSummary.module.css";
+import { CURRENCY, CURRENCY_SIGNS } from "../../const/currency";
 
 export function CartSummary({ products }) {
-    const deliveryCost = 19;
-    const minSumForFreeDelivery = 300;
+    const [currency] = useContext(CurrencyContext);
+
+    const deliveryCosts = {
+        [CURRENCY.PLN]: 19,
+        [CURRENCY.EUR]: 4,
+        [CURRENCY.USD]: 5,
+    };
+
+    const minSumsForFreeDelivery = {
+        [CURRENCY.PLN]: 300,
+        [CURRENCY.EUR]: 70,
+        [CURRENCY.USD]: 80,
+    };
+
+    const deliveryCost = deliveryCosts[currency];
+    const minSumForFreeDelivery = minSumsForFreeDelivery[currency];
+
+    const currencySigns = CURRENCY_SIGNS[currency];
 
     let sum = 0;
     products.forEach((product) => {
-        sum += product.pricePLN;
+        sum +=
+            currency === CURRENCY.PLN
+                ? product.pricePLN
+                : currency === CURRENCY.EUR
+                ? product.priceEUR
+                : product.priceUSD;
     });
 
     const totalCost = sum > minSumForFreeDelivery ? sum : sum + deliveryCost;
@@ -21,23 +45,30 @@ export function CartSummary({ products }) {
             <h2>Podsumowanie</h2>
             <div className={styles.cartRow}>
                 <p>Wartość produktów</p>
-                <p>{sum} zł</p>
+                <p>
+                    {sum} {currencySigns}
+                </p>
             </div>
             <div className={styles.cartRow}>
                 <p>Rabat</p>
-                <p>0 zł</p>
+                <p>0 {currencySigns}</p>
             </div>
             <div className={styles.cartRow}>
                 <p>Koszt dostawy</p>
-                <p>{sum > minSumForFreeDelivery ? 0 : deliveryCost} zł</p>
+                <p>
+                    {sum > minSumForFreeDelivery ? 0 : deliveryCost}{" "}
+                    {currencySigns}
+                </p>
             </div>
             <div className={styles.cartRow}>
                 <p>Koszt płatności</p>
-                <p>0 zł</p>
+                <p>0 {currencySigns}</p>
             </div>
             <div className={`${styles.cartRow} ${styles.cartSummaryRow}`}>
                 <p>Kwota do zapłaty</p>
-                <p>{totalCost} zł</p>
+                <p>
+                    {totalCost} {currencySigns}
+                </p>
             </div>
             <FullWidthButton>Dalej</FullWidthButton>
             <div className={styles.deliveryInfo}>
@@ -50,7 +81,10 @@ export function CartSummary({ products }) {
                     <p>
                         Dostawa w ciągu <b>2 - 5 dni roboczych</b>
                     </p>
-                    <p>Darmowa dostawa od {minSumForFreeDelivery} zł</p>
+                    <p>
+                        Darmowa dostawa od {minSumForFreeDelivery}{" "}
+                        {currencySigns}
+                    </p>
                     <p>30 dni na wymianę lub zwrot</p>
                 </div>
             </div>

@@ -3,23 +3,26 @@ import BAG_ICON from "../../assets/bag.svg";
 import REMOVE_ICON from "../../assets/remove.svg";
 
 import styles from "./FavoriteProduct.module.css";
+import { Price } from "../Price/Price";
 
 export function FavoriteProduct({ favorite }) {
     const product = favorite.product;
     const { Form } = useFetcher();
+
+    const price = <Price product={product} />;
     return (
         <div className={styles.favoriteProduct}>
             <img src={product.photos[0]} />
             <div className={styles.favoriteProductInfo}>
-                <div className={styles.brand}>
+                <div className={styles.top}>
                     <h3>
                         {product.brand} {product.productName}
                     </h3>
-                    <p>{product.pricePLN}zł</p>
+                    <p>{price}</p>
                 </div>
                 <p className={styles.price}>
                     <span>Cena: </span>
-                    {product.pricePLN}zł
+                    {price}
                 </p>
                 <div className={styles.button}>
                     <Form
