@@ -5,8 +5,8 @@ import styles from "./NewsletterPopUp.module.css";
 export function NewsletterPopUp({ isVisible, onClose }) {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [email, setEmail] = useState("");
-    //const [phone, setPhone] = useState("");
-    //const [regionCode, setRegionCode] = useState("+48"); // Domyślny kod kraju
+    // const [phone, setPhone] = useState("");
+    // const [regionCode, setRegionCode] = useState("+48");
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
 
@@ -24,10 +24,10 @@ export function NewsletterPopUp({ isVisible, onClose }) {
     const handleSubmit = async (e) => {
         // Obsługa przycisku "Zapisz się"
         e.preventDefault();
-        //const fullPhoneNumber = phone ? `${regionCode}${phone}` : "";
+        // const fullPhoneNumber = phone ? `${regionCode}${phone}` : "";
         const { success, message } = await subscribeToNewsletter(
             email
-            //fullPhoneNumber
+            // fullPhoneNumber
         );
         setMessage(message);
         setMessageType(success ? "success" : "error");
@@ -64,7 +64,7 @@ export function NewsletterPopUp({ isVisible, onClose }) {
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         {/* <div className={styles.phoneInput}>
-                            {/* <select
+                            <select
                                 value={regionCode}
                                 onChange={(e) => setRegionCode(e.target.value)}
                                 className={styles.regionCode}
@@ -75,7 +75,6 @@ export function NewsletterPopUp({ isVisible, onClose }) {
                                 <option value="+49">🇩🇪 +49</option>
                                 <option value="+33">🇫🇷 +33</option>
                                 <option value="+39">🇮🇹 +39</option>
-                                
                             </select>
                             <input
                                 type="tel"

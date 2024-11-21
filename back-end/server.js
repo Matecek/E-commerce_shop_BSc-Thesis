@@ -1,34 +1,42 @@
+require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const twilio = require("twilio");
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
 const transporter = nodemailer.createTransport({
-    service: "Gmail", // Serwis e-mail
+    service: "Gmail",
     auth: {
-        user: "mateusz.wojtas777@gmail.com", // E-mail nadawcy
-        pass: "kccp shgv xfcz yndw", // Hasło aplikacji
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
+const twilioClient = twilio(
+    process.env.TWILIO_ACCOUNT_SID,
+    process.env.TWILIO_AUTH_TOKEN
+);
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
 app.post("/subscribe", (req, res) => {
-    const { email } = req.body;
+    const { email, phone } = req.body;
 
-    if (!email) {
-        // Sprawdzenie, czy e-mail został podany
-        return res.status(400).send({ message: "E-mail is required" });
+    if (!email && !phone) {
+        return res
+            .status(400)
+            .send({ message: "E-mail lub telefon jest wymagany." });
     }
 
-    const mailOptions = {
-        // Konfiguracja wiadomości e-mail
-        from: "MATT.com <mateusz.wojtas777@gmail.com>",
-        to: email,
-        subject: "Dodano cię do naszego Newslettera!",
-        html: `
+    if (email) {
+        const mailOptions = {
+            from: `MATT.com <${process.env.EMAIL_USER}>`,
+            to: email,
+            subject: "Dodano cię do naszego Newslettera!",
+            html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px; padding: 20px;">
                 <h1 style="color: #ffa319; text-align: center;">Witamy w naszym Newsletterze!</h1>
                 <p style="font-size: 16px; line-height: 1.5; color: #333;">
@@ -39,26 +47,45 @@ app.post("/subscribe", (req, res) => {
                 </p>
                 <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
                 <p style="font-size: 14px; color: #777; text-align: center;">
-                    © 2024 Twoja Firma. Wszelkie prawa zastrzeżone.<br />
+                    © 2024 Mateusz Wojtas. Wszelkie prawa zastrzeżone.<br />
                     <a href="#" style="color: #ffa319; text-decoration: none;">Zarządzaj subskrypcjami</a> | 
                     <a href="#" style="color: #ffa319; text-decoration: none;">Zrezygnuj z subskrypcji</a>
                 </p>
             </div>
         `,
-    };
+        };
 
-    transporter.sendMail(mailOptions, (error) => {
-        // Wysłanie wiadomości e-mail
-        if (error) {
-            // Obsługa błędu
-            return res
-                .status(500)
-                .send({ message: "Coś poszło nie tak.", error });
-        }
-        res.send({ message: "Email sent successfully!" });
-    });
+        transporter.sendMail(mailOptions, (error) => {
+            if (error) {
+                return res.status(500).send({
+                    message: "Nie udało się wysłać wiadomości e-mail.",
+                    error,
+                });
+            }
+            res.send({ message: "Email wysłany pomyślnie!" });
+        });
+    }
+
+    if (phone) {
+        twilioClient.messages
+            .create({
+                body: "Dziękujemy za zapisanie się do newslettera!",
+                from: twilioPhoneNumber,
+                to: phone,
+            })
+            .then(() => {
+                res.send({ message: "SMS wysłany pomyślnie!" });
+            })
+            .catch((error) => {
+                res.status(500).send({
+                    message: "Nie udało się wysłać SMS-a.",
+                    error,
+                });
+            });
+    }
 });
 
-app.listen(5000, () => {
-    console.log("Server is running on http://localhost:5000");
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

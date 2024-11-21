@@ -82,6 +82,7 @@
 }
 
 .message {
+    margin-top: 0.5rem;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
