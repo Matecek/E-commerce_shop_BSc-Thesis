@@ -24,6 +24,7 @@ export function NewsletterPopUp({ isVisible, onClose }) {
     const handleSubmit = async (e) => {
         // Obsługa przycisku "Zapisz się"
         e.preventDefault();
+        console.log(`Wysłano e-mail: ${email}`);
         // const fullPhoneNumber = phone ? `${regionCode}${phone}` : "";
         const { success, message } = await subscribeToNewsletter(
             email
