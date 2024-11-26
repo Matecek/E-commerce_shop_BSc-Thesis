@@ -22,7 +22,6 @@ export function Layout() {
     ].some((path) => location.pathname.startsWith(path));
 
     const [currency, setCurrency] = useLocalStorage("currency", CURRENCY.PLN);
-
     const [cartProduct, setCartProducts] = useLocalStorage("cart_products", []);
 
     function addProductToCart(product) {

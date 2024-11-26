@@ -11,10 +11,10 @@ export function useLocalStorage(key, defaultValue) {
 
     const [data, setData] = useState(() => getJSONFromLocalStorage());
 
-    function setJSONToLocalStorage(newData) {
+    function setJSONTOLocalStorage(newData) {
         setData(newData);
         localStorage[key] = JSON.stringify(newData);
     }
 
-    return [data, setJSONToLocalStorage];
+    return [data, setJSONTOLocalStorage];
 }

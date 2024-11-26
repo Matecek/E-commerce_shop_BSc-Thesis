@@ -5,12 +5,12 @@ import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { CartContext } from "../../contexts/CartContext";
 
 export function Cart() {
-    const [cartProducts] = useContext(CartContext);
+    const [cartItems] = useContext(CartContext);
 
     return (
         <FlexContainer>
-            <CartProductList products={cartProducts} />
-            <CartSummary products={cartProducts} />
+            <CartProductList products={cartItems} />
+            <CartSummary products={cartItems} />
         </FlexContainer>
     );
 }

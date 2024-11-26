@@ -1,57 +1,51 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { subscribeToNewsletter } from "../../api/sendNewsletter";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import styles from "./NewsletterPopUp.module.css";
 
-export function NewsletterPopUp({ isVisible, onClose }) {
-    const [isModalVisible, setIsModalVisible] = useState(false);
+export function NewsletterPopUp({ onClose }) {
     const [email, setEmail] = useState("");
-    // const [phone, setPhone] = useState("");
-    // const [regionCode, setRegionCode] = useState("+48");
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
+    const [hasSeenPopup, setHasSeenPopup] = useLocalStorage(
+        "hasSeenPopup",
+        false
+    );
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
+    // Ustaw modal na widoczny tylko przy pierwszym wejściu
     useEffect(() => {
-        // Wyświetlanie okna modalnego z newsletterem
-        const hasVisited = localStorage.getItem("hasVisitedHome");
-        if (!hasVisited && isVisible) {
+        if (!hasSeenPopup) {
             setIsModalVisible(true);
-            localStorage.setItem("hasVisitedHome", "true");
         }
-    }, [isVisible]);
-
-    if (!isModalVisible) return null;
+    }, [hasSeenPopup]);
 
     const handleSubmit = async (e) => {
-        // Obsługa przycisku "Zapisz się"
         e.preventDefault();
         console.log(`Wysłano e-mail: ${email}`);
-        // const fullPhoneNumber = phone ? `${regionCode}${phone}` : "";
-        const { success, message } = await subscribeToNewsletter(
-            email
-            // fullPhoneNumber
-        );
+        const { success, message } = await subscribeToNewsletter(email);
         setMessage(message);
         setMessageType(success ? "success" : "error");
 
         if (success) {
             setTimeout(() => {
-                setIsModalVisible(false);
-                onClose();
+                closeModal();
             }, 2000);
         }
     };
 
+    const closeModal = () => {
+        setIsModalVisible(false);
+        setHasSeenPopup(true); // Zapisujemy w localStorage informację, że popup był widoczny
+        onClose();
+    };
+
+    if (!isModalVisible) return null;
+
     return (
         <div className={styles.overlay}>
             <div className={styles.container}>
-                <button
-                    onClick={() => {
-                        setIsModalVisible(false);
-                        onClose();
-                    }}
-                >
-                    X
-                </button>
+                <button onClick={closeModal}>X</button>
                 <div className={styles.form}>
                     <h2>Zapisz się do naszego newslettera!</h2>
                     <p>
@@ -64,26 +58,6 @@ export function NewsletterPopUp({ isVisible, onClose }) {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        {/* <div className={styles.phoneInput}>
-                            <select
-                                value={regionCode}
-                                onChange={(e) => setRegionCode(e.target.value)}
-                                className={styles.regionCode}
-                            >
-                                <option value="+48">🇵🇱 +48</option>
-                                <option value="+1">🇺🇸 +1</option>
-                                <option value="+44">🇬🇧 +44</option>
-                                <option value="+49">🇩🇪 +49</option>
-                                <option value="+33">🇫🇷 +33</option>
-                                <option value="+39">🇮🇹 +39</option>
-                            </select>
-                            <input
-                                type="tel"
-                                placeholder="Podaj swój numer telefonu"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            />
-                        </div> */}
                         <button type="submit">Zapisz się</button>
                     </form>
                     {message && (

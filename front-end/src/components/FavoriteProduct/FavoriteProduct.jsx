@@ -1,9 +1,9 @@
 import { useFetcher } from "react-router-dom";
 import BAG_ICON from "../../assets/bag.svg";
 import REMOVE_ICON from "../../assets/remove.svg";
+import { Price } from "../Price/Price";
 
 import styles from "./FavoriteProduct.module.css";
-import { Price } from "../Price/Price";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
@@ -13,7 +13,7 @@ export function FavoriteProduct({ favorite }) {
 
     const price = <Price product={product} />;
 
-    const [, setCartProducts] = useContext(CartContext);
+    const [, addProductToCart] = useContext(CartContext);
 
     return (
         <div className={styles.favoriteProduct}>
@@ -41,7 +41,7 @@ export function FavoriteProduct({ favorite }) {
                     </Form>
                     <button
                         onClick={() => {
-                            setCartProducts(product);
+                            addProductToCart(product);
                         }}
                     >
                         <img src={BAG_ICON} />

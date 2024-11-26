@@ -3,14 +3,14 @@ import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
+import { CartContext } from "../../contexts/CartContext";
 
 import styles from "./Details.module.css";
-import { CartContext } from "../../contexts/CartContext";
 
 export function Details({ product }) {
     //Komponent wyświetlający szczegóły produktu
 
-    const [, setCartProducts] = useContext(CartContext);
+    const [, addProductToCart] = useContext(CartContext);
 
     const accordionContent = [
         {
@@ -31,7 +31,7 @@ export function Details({ product }) {
 
             <FullWidthButton
                 onClick={() => {
-                    setCartProducts(product);
+                    addProductToCart(product);
                 }}
                 isBlack={true}
             >
