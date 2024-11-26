@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CURRENCY, CURRENCY_SIGNS } from "../../const/currency";
-import { CurrencyContext } from "../../contexts/CurrencyContect";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 
 export function Price({ product }) {
     const [currency] = useContext(CurrencyContext);

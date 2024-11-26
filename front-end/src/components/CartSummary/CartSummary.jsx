@@ -3,8 +3,7 @@ import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import TIME from "../../assets/time.svg";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/CurrencyContect";
-
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import styles from "./CartSummary.module.css";
 import { CURRENCY, CURRENCY_SIGNS } from "../../const/currency";
 

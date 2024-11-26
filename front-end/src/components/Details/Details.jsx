@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 
 import styles from "./Details.module.css";
+import { CartContext } from "../../contexts/CartContext";
 
 export function Details({ product }) {
     //Komponent wyświetlający szczegóły produktu
+
+    const [, setCartProducts] = useContext(CartContext);
+
     const accordionContent = [
         {
             title: "Opis",
@@ -24,7 +29,14 @@ export function Details({ product }) {
             <p className={styles.productName}>{product.productName}</p>
             <p className={styles.price}>{product.pricePLN}zł</p>
 
-            <FullWidthButton isBlack={true}>Dodaj do koszyka</FullWidthButton>
+            <FullWidthButton
+                onClick={() => {
+                    setCartProducts(product);
+                }}
+                isBlack={true}
+            >
+                Dodaj do koszyka
+            </FullWidthButton>
 
             <ul className={styles.extraInfo}>
                 <li>

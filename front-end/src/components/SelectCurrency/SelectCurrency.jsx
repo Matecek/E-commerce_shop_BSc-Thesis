@@ -1,7 +1,7 @@
 import { CURRENCY } from "../../const/currency";
 import styles from "./SelectCurrency.module.css";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/CurrencyContect";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 
 export function SelectCurrency() {
     const [currency, setCurrency] = useContext(CurrencyContext); //Użycie hooka useContext
@@ -11,7 +11,6 @@ export function SelectCurrency() {
             value={currency}
             onChange={(e) => {
                 setCurrency(e.currentTarget.value);
-                localStorage["currency"] = e.currentTarget.value;
             }}
             className={styles.selectCurrency}
         >

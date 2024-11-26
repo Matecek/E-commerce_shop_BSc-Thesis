@@ -4,12 +4,17 @@ import REMOVE_ICON from "../../assets/remove.svg";
 
 import styles from "./FavoriteProduct.module.css";
 import { Price } from "../Price/Price";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export function FavoriteProduct({ favorite }) {
     const product = favorite.product;
     const { Form } = useFetcher();
 
     const price = <Price product={product} />;
+
+    const [, setCartProducts] = useContext(CartContext);
+
     return (
         <div className={styles.favoriteProduct}>
             <img src={product.photos[0]} />
@@ -34,7 +39,11 @@ export function FavoriteProduct({ favorite }) {
                             Usuń z ulubionych
                         </button>
                     </Form>
-                    <button>
+                    <button
+                        onClick={() => {
+                            setCartProducts(product);
+                        }}
+                    >
                         <img src={BAG_ICON} />
                         Przenieś do koszyka
                     </button>
