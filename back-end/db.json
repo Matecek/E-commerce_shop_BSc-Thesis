@@ -2339,12 +2339,17 @@
     {
       "productId": 17,
       "id": 6
+    },
+    {
+      "productId": 17,
+      "id": 7
     }
   ],
   "cart": [
     {
-      "productId": 17,
-      "id": 4
+      "productId": 461,
+      "quantity": 8,
+      "id": 11
     }
   ]
 }

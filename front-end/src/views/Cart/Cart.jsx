@@ -7,11 +7,10 @@ import { useState } from "react";
 
 export function Cart() {
     const cartProducts = useLoaderData();
-    console.log(cartProducts);
-    const [cart, setCart] = useState(false);
+    const [qty, setQty] = useState(false);
 
     return (
-        <CartContext.Provider value={[cart, setCart]}>
+        <CartContext.Provider value={[qty, setQty]}>
             <FlexContainer>
                 <CartProductList cartProducts={cartProducts} />
                 <CartSummary cartProducts={cartProducts} />

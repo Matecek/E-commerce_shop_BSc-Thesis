@@ -30,12 +30,13 @@ export function CartSummary({ cartProducts }) {
 
     let sum = 0;
     cartProducts.forEach((product) => {
-        sum +=
+        let price =
             currency === CURRENCY.PLN
                 ? product.product.pricePLN
                 : currency === CURRENCY.EUR
                 ? product.product.priceEUR
                 : product.product.priceUSD;
+        sum += price * product.quantity;
     });
 
     const totalCost = sum > minSumForFreeDelivery ? sum : sum + deliveryCost;
