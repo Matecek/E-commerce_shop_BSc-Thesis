@@ -1,16 +1,15 @@
-import { useContext } from "react";
+import { useFetcher } from "react-router-dom";
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
-import { CartContext } from "../../contexts/CartContext";
 
 import styles from "./Details.module.css";
 
 export function Details({ product }) {
     //Komponent wyświetlający szczegóły produktu
 
-    const [, addProductToCart] = useContext(CartContext);
+    const { Form } = useFetcher(); //Użycie hooka useFetcher
 
     const accordionContent = [
         {
@@ -28,15 +27,17 @@ export function Details({ product }) {
             <h2>{product.brand}</h2>
             <p className={styles.productName}>{product.productName}</p>
             <p className={styles.price}>{product.pricePLN}zł</p>
-
-            <FullWidthButton
-                onClick={() => {
-                    addProductToCart(product);
+            <Form //Formularz do dodawania produktu do ulubionych
+                onClick={(e) => {
+                    e.stopPropagation(); //Zatrzymanie propagacji
                 }}
-                isBlack={true}
+                method="POST"
+                action={`/add-to-cart/${product.id}`}
             >
-                Dodaj do koszyka
-            </FullWidthButton>
+                <FullWidthButton isBlack={true}>
+                    Dodaj do koszyka
+                </FullWidthButton>
+            </Form>
 
             <ul className={styles.extraInfo}>
                 <li>

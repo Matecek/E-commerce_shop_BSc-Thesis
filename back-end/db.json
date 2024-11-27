@@ -2338,11 +2338,13 @@
   "favorites": [
     {
       "productId": 17,
-      "id": 5
-    },
-    {
-      "productId": 16,
       "id": 6
+    }
+  ],
+  "cart": [
+    {
+      "productId": 17,
+      "id": 4
     }
   ]
 }

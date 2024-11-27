@@ -7,6 +7,8 @@ import { useLoaderData } from "react-router-dom";
 
 export function ProductDetails() {
     const product = useLoaderData(); //Pobranie danych produktu z hooka useLoaderData
+    const singleProduct = product[0];
+    const currentCart = product[1];
 
     return (
         <FlexContainer>
@@ -14,8 +16,11 @@ export function ProductDetails() {
             <div style={{ width: "100%" }}>
                 <Breadcrumbs />
                 <FlexContainer>
-                    <Photos product={product} />
-                    <Details product={product} />
+                    <Photos product={singleProduct} />
+                    <Details
+                        currentCart={currentCart}
+                        product={singleProduct}
+                    />
                 </FlexContainer>
             </div>
         </FlexContainer>

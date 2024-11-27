@@ -3,15 +3,18 @@ import { CartProduct } from "../CartProduct/CartProduct";
 
 import styles from "../CartProductList/CartProductList.module.css";
 
-export function CartProductList({ products }) {
+export function CartProductList({ cartProducts }) {
     return (
         <CenterContent>
             <div className={styles.cartList}>
                 <h2>Koszyk</h2>
                 <div>
-                    {products.map((product) => {
+                    {cartProducts.map((cartProduct) => {
                         return (
-                            <CartProduct key={product.id} product={product} />
+                            <CartProduct
+                                key={cartProduct.id}
+                                cartProduct={cartProduct}
+                            />
                         );
                     })}
                 </div>

@@ -1,9 +1,13 @@
+import { useFetcher } from "react-router-dom";
 import REMOVE_ICON from "../../assets/remove.svg";
 
 import styles from "../CartProduct/CartProduct.module.css";
 import { Price } from "../Price/Price";
 
-export function CartProduct({ product }) {
+export function CartProduct({ cartProduct }) {
+    const product = cartProduct.product;
+    const { Form } = useFetcher();
+
     const price = <Price product={product} />;
     return (
         <div className={styles.cartProduct}>
@@ -20,10 +24,15 @@ export function CartProduct({ product }) {
                     {price}
                 </p>
                 <div className={styles.button}>
-                    <button>
-                        <img src={REMOVE_ICON} />
-                        Usuń z koszyka
-                    </button>
+                    <Form
+                        action={`/delete-from-cart/${cartProduct.id}`}
+                        method="DELETE"
+                    >
+                        <button>
+                            <img src={REMOVE_ICON} />
+                            Usuń z koszyka
+                        </button>
+                    </Form>
                 </div>
             </div>
         </div>

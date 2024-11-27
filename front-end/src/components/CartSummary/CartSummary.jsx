@@ -8,7 +8,7 @@ import { CurrencyContext } from "../../contexts/CurrencyContext";
 import styles from "./CartSummary.module.css";
 import { CURRENCY, CURRENCY_SIGNS } from "../../const/currency";
 
-export function CartSummary({ products }) {
+export function CartSummary({ cartProducts }) {
     const [currency] = useContext(CurrencyContext);
 
     const deliveryCosts = {
@@ -29,13 +29,13 @@ export function CartSummary({ products }) {
     const currencySigns = CURRENCY_SIGNS[currency];
 
     let sum = 0;
-    products.forEach((product) => {
+    cartProducts.forEach((product) => {
         sum +=
             currency === CURRENCY.PLN
-                ? product.pricePLN
+                ? product.product.pricePLN
                 : currency === CURRENCY.EUR
-                ? product.priceEUR
-                : product.priceUSD;
+                ? product.product.priceEUR
+                : product.product.priceUSD;
     });
 
     const totalCost = sum > minSumForFreeDelivery ? sum : sum + deliveryCost;

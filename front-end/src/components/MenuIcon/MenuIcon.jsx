@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContext"; // Importuj CartContext
 
 import BAG from "../../assets/bag.svg";
 import HEART from "../../assets/heart.svg";
@@ -8,10 +6,7 @@ import HEART from "../../assets/heart.svg";
 import styles from "./MenuIcon.module.css";
 
 export function MenuIcon() {
-    const [cart] = useContext(CartContext); // Pobierz stan koszyka z contextu
-
-    // Liczba produktów w koszyku
-    const cartList = cart.length;
+    const cartList = 2;
 
     return (
         <ul className={styles.menuIcon}>
@@ -23,9 +18,7 @@ export function MenuIcon() {
             <li>
                 <Link to="/koszyk">
                     <img src={BAG} />
-                    {cartList > 0 && (
-                        <div className={styles.productsNumber}>{cartList}</div>
-                    )}
+                    <div className={styles.productsNumber}>{cartList}</div>
                 </Link>
             </li>
         </ul>

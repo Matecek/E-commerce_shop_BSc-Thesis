@@ -20,9 +20,12 @@ import { productListLoader } from "./api/productListloader";
 import { productLoader } from "./api/productLoader";
 import { addProductToFavorites } from "./api/addProductToFavorites";
 import { favoritesLoader } from "./api/favoritesLoader";
+import { cartLoader } from "./api/cartLoader";
 import { deleteFavoriteProduct } from "./api/deleteFavoriteProduct";
+import { addProductToCart } from "./api/addProductToCart";
 import { Newsletter } from "./views/Newsletter/Newsletter";
 import { CompanyInfo } from "./views/CompanyInfo/CompanyInfo";
+import { deleteFromCart } from "./api/deleteFromCart";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +35,14 @@ const router = createBrowserRouter([
     {
         path: "/delete-from-favorites/:favoriteId", //ścieżka do usuwania produktu z ulubionych
         action: deleteFavoriteProduct,
+    },
+    {
+        path: "/add-to-cart/:productId", //ścieżka do dodawania produktu do koszyka
+        action: addProductToCart,
+    },
+    {
+        path: "/delete-from-cart/:productId", //ścieżka do usuwania produktu z koszyka
+        action: deleteFromCart,
     },
     {
         path: "",
@@ -58,6 +69,7 @@ const router = createBrowserRouter([
             {
                 path: "/koszyk", //ścieżka do koszyka
                 element: <Cart />,
+                loader: cartLoader, //ładowanie koszyka
             },
             {
                 path: "/ulubione", //ścieżka do ulubionych
@@ -79,7 +91,7 @@ const router = createBrowserRouter([
                 loader: productListLoader, //ładowanie produktów
             },
             {
-                path: "/:gender/:category/:subcategory/:productId", //ścieżka do produktu
+                path: "/:gender/:category?/:subcategory/:productId", //ścieżka do produktu
                 element: <ProductDetails />,
                 loader: productLoader, //ładowanie produktu
             },
