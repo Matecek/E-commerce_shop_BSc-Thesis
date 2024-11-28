@@ -71,7 +71,7 @@ export function CartSummary({ cartProducts }) {
                     {totalCost} {currencySigns}
                 </p>
             </div>
-            <FullWidthButton>Dalej</FullWidthButton>
+            <FullWidthButton disabled={totalCost < 20}>Dalej</FullWidthButton>
             <div className={styles.deliveryInfo}>
                 <div className={styles.deliveryInfoImg}>
                     <img src={TIME} />

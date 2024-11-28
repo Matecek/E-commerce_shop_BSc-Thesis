@@ -47,9 +47,15 @@
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    border: none;
+    border: 1px solid var(--color-theme-main);
     border-radius: 5px;
     cursor: pointer;
+}
+.newsletterForm button:hover {
+    background-color: var(--color-white);
+    color: var(--color-text-default);
+    border: 1px solid var(--color-theme-main);
+    transition: background-color 0.3s;
 }
 
 .message {

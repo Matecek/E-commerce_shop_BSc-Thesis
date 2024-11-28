@@ -2339,17 +2339,20 @@
     {
       "productId": 17,
       "id": 6
-    },
-    {
-      "productId": 17,
-      "id": 7
     }
   ],
   "cart": [
     {
-      "productId": 461,
-      "quantity": 8,
-      "id": 11
+      "productId": 388,
+      "size": "M",
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "productId": 17,
+      "size": "M",
+      "quantity": 1,
+      "id": 2
     }
   ]
 }

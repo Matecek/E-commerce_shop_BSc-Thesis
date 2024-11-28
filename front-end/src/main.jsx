@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         action: deleteFavoriteProduct,
     },
     {
-        path: "/add-to-cart/:productId/:quantity?", //ścieżka do dodawania produktu do koszyka
+        path: "/add-to-cart/:productId/:size/:quantity?", //ścieżka do dodawania produktu do koszyka
         action: addProductToCart,
     },
     {

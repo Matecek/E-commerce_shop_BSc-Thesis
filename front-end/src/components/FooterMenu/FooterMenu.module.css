@@ -9,7 +9,7 @@
 }
 
 .footerMenu div {
-    color: white;
+    color: var(--color-text-default);
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 2rem;
@@ -22,9 +22,10 @@
 }
 
 .footerMenu li a {
-    color: white;
+    color: var(--color-text-default);
 }
 
 .footerMenu a:hover {
     color: var(--color-theme-main);
+    transition: color 0.3s;
 }

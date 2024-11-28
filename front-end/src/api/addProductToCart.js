@@ -1,16 +1,17 @@
 import { BACK_END_URL } from "../const/api";
 
-export function addProductToCart({ params: { productId, quantity = "1" } }) {
+export function addProductToCart({
+    params: { productId, size, quantity = "0" },
+}) {
     return fetch(`${BACK_END_URL}/cart`, {
-        //Zapytanie do serwera o dodanie produktu do ulubionych
         method: "POST",
         body: JSON.stringify({
-            //Przekazanie danych w formacie JSON
             productId: Number(productId),
+            size: size,
             quantity: Number(quantity),
         }),
         headers: {
-            "Content-Type": "application/json", //Ustalenie typu przesyłanych danych
+            "Content-Type": "application/json",
         },
     });
 }

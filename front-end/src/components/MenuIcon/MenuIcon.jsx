@@ -6,7 +6,7 @@ import HEART from "../../assets/heart.svg";
 import styles from "./MenuIcon.module.css";
 
 export function MenuIcon() {
-    const cartList = 2;
+    const cartList = null;
 
     return (
         <ul className={styles.menuIcon}>

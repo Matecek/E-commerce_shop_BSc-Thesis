@@ -1,9 +1,10 @@
-import { useFetcher } from "react-router-dom";
-import BAG_ICON from "../../assets/bag.svg";
+import { Link, useFetcher } from "react-router-dom";
+// import BAG_ICON from "../../assets/bag.svg";
 import REMOVE_ICON from "../../assets/remove.svg";
 
 import styles from "./FavoriteProduct.module.css";
 import { Price } from "../Price/Price";
+import { ENDPOINT_TO_PATH_MAPING_GENDER } from "../../const/api";
 
 export function FavoriteProduct({ favorite }) {
     const product = favorite.product;
@@ -12,12 +13,26 @@ export function FavoriteProduct({ favorite }) {
     const price = <Price product={product} />;
     return (
         <div className={styles.favoriteProduct}>
-            <img src={product.photos[0]} />
+            <Link
+                to={`/${ENDPOINT_TO_PATH_MAPING_GENDER[product.gender]}/${
+                    product.category
+                }/${product.subcategory}/${product.id}`}
+            >
+                <img src={product.photos[0]} />
+            </Link>
             <div className={styles.favoriteProductInfo}>
                 <div className={styles.top}>
-                    <h3>
-                        {product.brand} {product.productName}
-                    </h3>
+                    <Link
+                        to={`/${
+                            ENDPOINT_TO_PATH_MAPING_GENDER[product.gender]
+                        }/${product.category}/${product.subcategory}/${
+                            product.id
+                        }`}
+                    >
+                        <h3>
+                            {product.brand} {product.productName}
+                        </h3>
+                    </Link>
                     <p>{price}</p>
                 </div>
                 <p className={styles.price}>
@@ -34,12 +49,12 @@ export function FavoriteProduct({ favorite }) {
                             Usuń z ulubionych
                         </button>
                     </Form>
-                    <Form action={`/add-to-cart/${product.id}`} method="POST">
+                    {/* <Form action={`/add-to-cart/${product.id}`} method="POST">
                         <button>
                             <img src={BAG_ICON} />
                             Przenieś do koszyka
                         </button>
-                    </Form>
+                    </Form> */}
                 </div>
             </div>
         </div>

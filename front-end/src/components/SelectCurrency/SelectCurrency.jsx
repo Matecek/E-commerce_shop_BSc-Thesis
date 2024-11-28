@@ -11,7 +11,6 @@ export function SelectCurrency() {
             value={currency}
             onChange={(e) => {
                 setCurrency(e.currentTarget.value);
-                localStorage["currency"] = e.currentTarget.value;
             }}
             className={styles.selectCurrency}
         >

@@ -1,35 +1,54 @@
+import { useContext, useState } from "react";
 import { useFetcher } from "react-router-dom";
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
 import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
+import { SizeSelector } from "../SizeSelector/SizeSelector";
 
 import styles from "./Details.module.css";
-import { useState } from "react";
+import { CartContext } from "../../contexts/CartContext"; // Importowanie kontekstu koszyka
 
-export function Details({ product, currentCart }) {
-    //Komponent wyświetlający szczegóły produktu
-
-    const { Form } = useFetcher(); //Użycie hooka useFetcher
+export function Details({ product }) {
+    const { Form } = useFetcher();
+    const [selectedSize, setSelectedSize] = useState(null);
     const [quantity, setQuantity] = useState(1);
 
+    const { cartItems, addToCart } = useContext(CartContext); // Używamy CartContext
+    const sizeArray = ["S", "M", "L", "XL"];
     const accordionContent = [
-        {
-            title: "Opis",
-            content: product.description,
-        },
-        {
-            title: "Pielęgnacja",
-            content: product.care,
-        },
+        { title: "Opis", content: product.description },
+        { title: "Pielęgnacja", content: product.care },
     ];
 
-    const checkACart = (id) => {
-        currentCart.map((cartItem) => {
-            if (cartItem.productId === id) {
-                setQuantity((cartItem.quantity = cartItem.quantity + 1));
+    // Funkcja do dodawania produktu do koszyka, zaktualizowana z kontekstem
+    const handleAddToCart = () => {
+        if (selectedSize !== null) {
+            const existingItem = cartItems.find(
+                (cartItem) =>
+                    cartItem.productId === product.id &&
+                    cartItem.size === sizeArray[selectedSize]
+            );
+
+            if (existingItem) {
+                // Jeśli produkt jest już w koszyku, zwiększamy jego ilość
+                existingItem.quantity += quantity;
+            } else {
+                // Jeśli produktu nie ma w koszyku, dodajemy go
+                addToCart({
+                    productId: product.id,
+                    productName: product.productName,
+                    price: product.pricePLN,
+                    size: sizeArray[selectedSize],
+                    quantity: quantity,
+                    brand: product.brand,
+                });
             }
-        });
+
+            // Zresetowanie wybranego rozmiaru i ilości po dodaniu do koszyka
+            setSelectedSize(null);
+            setQuantity(1);
+        }
     };
 
     return (
@@ -37,15 +56,29 @@ export function Details({ product, currentCart }) {
             <h2>{product.brand}</h2>
             <p className={styles.productName}>{product.productName}</p>
             <p className={styles.price}>{product.pricePLN}zł</p>
-            <Form //Formularz do dodawania produktu do ulubionych
+
+            <SizeSelector
+                sizeArray={sizeArray}
+                selectedSize={selectedSize}
+                setSelectedSize={setSelectedSize}
+            />
+
+            <Form
                 method="POST"
-                action={`/add-to-cart/${product.id}/${quantity}`}
+                action={
+                    selectedSize !== null
+                        ? `/add-to-cart/${product.id}/${sizeArray[selectedSize]}/${quantity}`
+                        : ""
+                }
                 onClick={(e) => {
-                    e.stopPropagation(); //Zatrzymanie propagacji
-                    checkACart(product.id);
+                    e.stopPropagation();
+                    handleAddToCart(); // Zmieniamy nazwę funkcji
                 }}
             >
-                <FullWidthButton isBlack={true}>
+                <FullWidthButton
+                    disabled={selectedSize === null}
+                    isBlack={true}
+                >
                     Dodaj do koszyka
                 </FullWidthButton>
             </Form>

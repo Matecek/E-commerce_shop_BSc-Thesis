@@ -23,7 +23,6 @@
     font-size: 0.5rem;
     font-weight: bold;
 }
-
 .addedToCartMessage {
     position: fixed;
     bottom: 20px;
@@ -36,7 +35,6 @@
     opacity: 0;
     animation: fadeInOut 2s ease-in-out forwards;
 }
-
 @keyframes fadeInOut {
     0% {
         opacity: 0;

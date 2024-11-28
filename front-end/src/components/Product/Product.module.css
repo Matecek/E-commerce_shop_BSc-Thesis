@@ -11,6 +11,10 @@
     height: 300px;
 }
 
+.product img:hover {
+    transform: scale(1.02);
+}
+
 .product h3 {
     margin: 0.5rem 0;
     font-weight: bold;

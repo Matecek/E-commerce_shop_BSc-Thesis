@@ -1,4 +1,4 @@
-import { useFetcher } from "react-router-dom";
+import { Link, useFetcher } from "react-router-dom";
 import REMOVE_ICON from "../../assets/remove.svg";
 
 import styles from "../CartProduct/CartProduct.module.css";
@@ -8,6 +8,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { editQuantity } from "../../api/editQuantity";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { CURRENCY, CURRENCY_SIGNS } from "../../const/currency";
+import { ENDPOINT_TO_PATH_MAPING_GENDER } from "../../const/api";
 
 export function CartProduct({ cartProduct }) {
     const product = cartProduct.product;
@@ -27,16 +28,34 @@ export function CartProduct({ cartProduct }) {
 
     return (
         <div className={styles.cartProduct}>
-            <img src={product.photos[0]} />
+            <Link
+                to={`/${ENDPOINT_TO_PATH_MAPING_GENDER[product.gender]}/${
+                    product.category
+                }/${product.subcategory}/${product.id}`}
+            >
+                <img src={product.photos[0]} />
+            </Link>
             <div className={styles.cartProductInfo}>
                 <div className={styles.top}>
-                    <h3>
-                        {product.brand} {product.productName}
-                    </h3>
+                    <Link
+                        to={`/${
+                            ENDPOINT_TO_PATH_MAPING_GENDER[product.gender]
+                        }/${product.category}/${product.subcategory}/${
+                            product.id
+                        }`}
+                    >
+                        <h3>
+                            {product.brand} {product.productName}
+                        </h3>
+                    </Link>
                     <p>
                         {totalPrice} {CURRENCY_SIGNS[currency]}
                     </p>
                 </div>
+                <p className={styles.size}>
+                    <span>Rozmiar: </span>
+                    {cartProduct.size}
+                </p>
                 <p className={styles.price}>
                     <span>Cena: </span>
                     {price}
