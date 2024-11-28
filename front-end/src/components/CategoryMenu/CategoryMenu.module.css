@@ -18,6 +18,7 @@
 
 .categoryMenu ul li a:hover {
     color: var(--color-text-grey);
+    transition: color 0.3s;
 }
 
 .categoryMenu ul li a:global(.active) {

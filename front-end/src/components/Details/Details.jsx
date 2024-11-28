@@ -1,4 +1,3 @@
-import { useContext, useState } from "react";
 import { useFetcher } from "react-router-dom";
 import CAR from "../../assets/car.svg";
 import RETURN from "../../assets/return.svg";
@@ -7,48 +6,31 @@ import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import { SizeSelector } from "../SizeSelector/SizeSelector";
 
 import styles from "./Details.module.css";
-import { CartContext } from "../../contexts/CartContext"; // Importowanie kontekstu koszyka
+import { useState } from "react";
 
-export function Details({ product }) {
-    const { Form } = useFetcher();
-    const [selectedSize, setSelectedSize] = useState(null);
+import { editQuantity } from "../../api/editQuantity";
+
+export function Details({ product, currentCart }) {
+    //Komponent wyświetlający szczegóły produktu
+
+    const { Form } = useFetcher(); //Użycie hooka useFetcher
     const [quantity, setQuantity] = useState(1);
-
-    const { cartItems, addToCart } = useContext(CartContext); // Używamy CartContext
     const sizeArray = ["S", "M", "L", "XL"];
+    const [selectedSize, setSelectedSize] = useState(null);
+
     const accordionContent = [
         { title: "Opis", content: product.description },
         { title: "Pielęgnacja", content: product.care },
     ];
 
-    // Funkcja do dodawania produktu do koszyka, zaktualizowana z kontekstem
-    const handleAddToCart = () => {
-        if (selectedSize !== null) {
-            const existingItem = cartItems.find(
-                (cartItem) =>
-                    cartItem.productId === product.id &&
-                    cartItem.size === sizeArray[selectedSize]
-            );
-
-            if (existingItem) {
-                // Jeśli produkt jest już w koszyku, zwiększamy jego ilość
-                existingItem.quantity += quantity;
-            } else {
-                // Jeśli produktu nie ma w koszyku, dodajemy go
-                addToCart({
-                    productId: product.id,
-                    productName: product.productName,
-                    price: product.pricePLN,
-                    size: sizeArray[selectedSize],
-                    quantity: quantity,
-                    brand: product.brand,
-                });
+    const handleAddToCart = (id, size) => {
+        currentCart.map((cartItem) => {
+            if (cartItem.productId === id && cartItem.size === size) {
+                setSelectedSize(null);
+                setQuantity((cartItem.quantity = 1));
+                editQuantity(cartItem, quantity);
             }
-
-            // Zresetowanie wybranego rozmiaru i ilości po dodaniu do koszyka
-            setSelectedSize(null);
-            setQuantity(1);
-        }
+        });
     };
 
     return (
@@ -70,9 +52,8 @@ export function Details({ product }) {
                         ? `/add-to-cart/${product.id}/${sizeArray[selectedSize]}/${quantity}`
                         : ""
                 }
-                onClick={(e) => {
-                    e.stopPropagation();
-                    handleAddToCart(); // Zmieniamy nazwę funkcji
+                onClick={() => {
+                    handleAddToCart(product.id, sizeArray[selectedSize]);
                 }}
             >
                 <FullWidthButton
