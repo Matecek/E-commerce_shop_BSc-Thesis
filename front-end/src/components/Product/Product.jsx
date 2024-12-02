@@ -7,7 +7,7 @@ const ENDPOINT_TO_PATH_MAPPING = {
     //Mapowanie endpointów na ścieżki
     men: "mezczyzni",
     women: "kobiety",
-    Children: "dzieci",
+    children: "dzieci",
 };
 
 export function Product({ product }) {

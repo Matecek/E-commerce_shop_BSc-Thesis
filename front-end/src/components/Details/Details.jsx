@@ -9,6 +9,7 @@ import styles from "./Details.module.css";
 import { useState } from "react";
 
 import { editQuantity } from "../../api/editQuantity";
+import { Price } from "../Price/Price";
 
 export function Details({ product, currentCart }) {
     //Komponent wyświetlający szczegóły produktu
@@ -17,6 +18,7 @@ export function Details({ product, currentCart }) {
     const [quantity, setQuantity] = useState(1);
     const sizeArray = ["S", "M", "L", "XL"];
     const [selectedSize, setSelectedSize] = useState(null);
+    const price = <Price product={product} />;
 
     const accordionContent = [
         { title: "Opis", content: product.description },
@@ -37,7 +39,7 @@ export function Details({ product, currentCart }) {
         <div className={styles.details}>
             <h2>{product.brand}</h2>
             <p className={styles.productName}>{product.productName}</p>
-            <p className={styles.price}>{product.pricePLN}zł</p>
+            <p className={styles.price}>{price}</p>
 
             <SizeSelector
                 sizeArray={sizeArray}

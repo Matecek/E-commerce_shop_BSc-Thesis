@@ -2339,28 +2339,32 @@
     {
       "productId": 17,
       "id": 6
+    },
+    {
+      "productId": 388,
+      "id": 7
     }
   ],
   "cart": [
     {
-      "productId": 10,
-      "size": "S",
+      "productId": 17,
+      "size": "M",
       "quantity": 3,
       "id": 1,
       "product": {
-        "id": 10,
+        "id": 17,
         "gender": "men",
-        "category": "odziez",
-        "subcategory": "spodenki",
-        "productName": "Spodenki 2",
-        "brand": "Top Brand",
-        "pricePLN": 49,
-        "priceUSD": 10,
-        "priceEUR": 9,
+        "category": "buty",
+        "subcategory": "trampki",
+        "productName": "Trampki 1",
+        "brand": "Sun Tzu",
+        "pricePLN": 199,
+        "priceUSD": 49,
+        "priceEUR": 44,
         "photos": [
-          "http://localhost:3000/product-photos/spodenki-men-2.jpg",
-          "http://localhost:3000/product-photos/spodenki-men-1.jpg",
-          "http://localhost:3000/product-photos/spodenki-men-2.jpg"
+          "http://localhost:3000/product-photos/trampki-men-2.jpg",
+          "http://localhost:3000/product-photos/trampki-men-1.jpg",
+          "http://localhost:3000/product-photos/trampki-men-3.jpg"
         ],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
         "care": "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu"

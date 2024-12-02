@@ -12,7 +12,7 @@ export const ENDPOINT_TO_PATH_MAPING_GENDER = {
     news: "nowosci",
     women: "kobiety",
     men: "mezczyzni",
-    children: "dzeci",
+    children: "dzieci",
 };
 
 export const BACK_END_URL = "http://localhost:3000"; //Adres URL backendu
