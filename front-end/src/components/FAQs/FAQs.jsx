@@ -1,7 +1,6 @@
 import { Accordion } from "../Accordion/Accordion";
 import { CenterContent } from "../CenterContent/CenterContent";
-import { FAQ } from "../../const/faq"; // Import danych z pliku faq.js
-
+import { FAQ } from "../../const/faq";
 import styles from "./FAQS.module.css";
 
 export function FAQs() {
@@ -16,7 +15,6 @@ export function FAQs() {
             <div className={styles.faq}>
                 <h1>FAQ</h1>
                 <h2>Odpowiedzi na najszczęściej zadawane pytania</h2>
-                {/* Przekazujemy przekonwertowaną tablicę do Accordion */}
             </div>
             <div className={styles.accordion}>
                 <Accordion items={accordionContent} />
