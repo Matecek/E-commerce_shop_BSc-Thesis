@@ -40,3 +40,10 @@
     gap: 0.7rem;
     margin-left: 0.7rem;
 }
+
+@media screen and (max-width: 800px) {
+    .cartSummary {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}

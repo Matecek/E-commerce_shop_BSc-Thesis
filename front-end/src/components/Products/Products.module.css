@@ -9,3 +9,9 @@
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1000px) {
+    .productsWrapper {
+        justify-content: center;
+    }
+}

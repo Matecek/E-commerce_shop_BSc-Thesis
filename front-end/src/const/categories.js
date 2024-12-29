@@ -126,8 +126,4 @@ export const HELP = [
         categoryName: "Dostawa i płatność",
         path: "centrum-informacji",
     },
-    {
-        categoryName: "Zwroty, wymiany i reklamacje",
-        path: "centrum-informacji",
-    },
 ];

@@ -1,0 +1,23 @@
+.cookieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-top: 2px solid var(--color-theme-main);
+    padding-left: 10%;
+    padding-bottom: 0.5rem;
+}
+
+.cookieDetails h1 {
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-grey);
+}
+
+.cookieDetails p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-grey);
+}

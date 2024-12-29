@@ -29,3 +29,10 @@
     color: var(--color-theme-main);
     transition: color 0.3s;
 }
+
+@media screen and (max-width: 800px) {
+    .footerMenu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

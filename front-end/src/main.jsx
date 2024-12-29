@@ -25,6 +25,10 @@ import { deleteFavoriteProduct } from "./api/deleteFavoriteProduct";
 import { addProductToCart } from "./api/addProductToCart";
 import { Newsletter } from "./views/Newsletter/Newsletter";
 import { CompanyInfo } from "./views/CompanyInfo/CompanyInfo";
+import { Policy } from "./views/Policy/Policy";
+import { Cookies } from "./views/Cookies/Cookies";
+import { FAQ } from "./views/FAQ/FAQ";
+import { Delivery } from "./views/Delivery/Delivery";
 import { deleteFromCart } from "./api/deleteFromCart";
 
 const router = createBrowserRouter([
@@ -65,6 +69,22 @@ const router = createBrowserRouter([
             {
                 path: "/info", //ścieżka do informacji
                 element: <CompanyInfo />,
+            },
+            {
+                path: "/policy", //ścieżka do polityki prywatności
+                element: <Policy />,
+            },
+            {
+                path: "/cookies", //ścieżka do polityki cookie
+                element: <Cookies />,
+            },
+            {
+                path: "/faq", //ścieżka do często zadawanych pytań
+                element: <FAQ />,
+            },
+            {
+                path: "/centrum-informacji", //ścieżka do centrum informacji
+                element: <Delivery />,
             },
             {
                 path: "/koszyk", //ścieżka do koszyka

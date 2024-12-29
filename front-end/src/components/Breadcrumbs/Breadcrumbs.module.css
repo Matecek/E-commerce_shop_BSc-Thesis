@@ -24,3 +24,10 @@
 .breadcrumbs li:last-of-type img {
     display: none;
 }
+
+@media (max-width: 700px) {
+    .breadcrumbs {
+        gap: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}

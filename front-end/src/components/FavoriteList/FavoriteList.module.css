@@ -4,3 +4,9 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 800px) {
+    .favoriteList {
+        padding: 0.5rem;
+    }
+}

@@ -1,4 +1,5 @@
 import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
+import { DetailsContainer } from "../../components/DetailsContainer/DetailsContainer";
 import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
 import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { Photos } from "../../components/Photos/Photos";
@@ -13,15 +14,15 @@ export function ProductDetails() {
     return (
         <FlexContainer>
             <ExpandableMenu />
-            <div style={{ width: "100%" }}>
+            <div>
                 <Breadcrumbs />
-                <FlexContainer>
+                <DetailsContainer>
                     <Photos product={singleProduct} />
                     <Details
                         currentCart={currentCart}
                         product={singleProduct}
                     />
-                </FlexContainer>
+                </DetailsContainer>
             </div>
         </FlexContainer>
     );

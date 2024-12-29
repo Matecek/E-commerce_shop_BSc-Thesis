@@ -19,3 +19,22 @@
     height: 500px;
     margin-bottom: 4rem;
 }
+
+.photos {
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .thumbnails {
+        flex-direction: row;
+    }
+
+    .main {
+        margin-bottom: 0.5rem;
+    }
+    .photos {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+}

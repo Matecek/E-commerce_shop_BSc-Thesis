@@ -26,40 +26,9 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
-.details {
-    position: relative;
-}
 
-.sizeList {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.sizeList button {
-    border: none;
-    cursor: pointer;
-    background-color: white;
-}
-
-.sizeNumber {
-    padding: 0.3rem 0.6rem;
-    border: 1px solid var(--color-grey);
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-
-.selectedSize {
-    background-color: var(--color-theme-main);
-    color: var(--color-white);
-}
-
-.error,
-.added {
-    text-align: left;
-    color: rgb(100, 12, 12);
-}
-.added {
-    color: var(--color-theme-primary);
+@media (max-width: 1000px) {
+    .details {
+        text-align: center; /* Centrowanie tekstu */
+    }
 }
