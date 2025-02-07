@@ -80,6 +80,11 @@ export function CartProduct({ cartProduct }) {
                             onChange={(e) => {
                                 setQuantity(e.target.value);
                             }}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault(); // Blokuje domyślne zachowanie dla Enter
+                                }
+                            }}
                             value={quantity}
                             min={1}
                         />

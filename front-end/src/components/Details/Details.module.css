@@ -1,5 +1,5 @@
 .details {
-    width: 70%;
+    width: 100%;
     padding-right: 1rem;
 }
 
@@ -30,5 +30,6 @@
 @media (max-width: 1000px) {
     .details {
         text-align: center; /* Centrowanie tekstu */
+        width: 100%;
     }
 }

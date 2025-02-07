@@ -14,7 +14,7 @@ export function ProductDetails() {
     return (
         <FlexContainer>
             <ExpandableMenu />
-            <div>
+            <div style={{ width: "80%" }}>
                 <Breadcrumbs />
                 <DetailsContainer>
                     <Photos product={singleProduct} />

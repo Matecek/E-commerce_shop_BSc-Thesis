@@ -1,8 +1,8 @@
 .favoriteList {
     padding: 1rem 2rem;
     background-color: var(--color-grey);
-    margin-top: 2rem;
     margin-bottom: 2rem;
+    border-top: 2px solid var(--color-theme-main);
 }
 
 @media screen and (max-width: 800px) {
