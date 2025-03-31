@@ -19,6 +19,4 @@ Teraz możemy uruchomić aplikacje poprzez link podany tutaj.
 ![Express.js](https://camo.githubusercontent.com/c98a2d97ade319a8db51f20a8dcfbf5aa6049f594c3e78c8cf9461be5f38ea62/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f457870726573732d3030303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d45787072657373266c6f676f436f6c6f723d464646464646)
 
 # Website:
-[Live demo](e-commerce-bsc-thesis.netlify.app)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ba695aca-cd5b-429e-a34d-cae30d29b0a4/deploy-status)](https://app.netlify.com/sites/e-commerce-bsc-thesis/deploys)
-https://e-commerce-bsc-thesis.netlify.app/
+[Live demo](https://e-commerce-bsc-thesis.netlify.app/)
