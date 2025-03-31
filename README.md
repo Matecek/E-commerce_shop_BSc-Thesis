@@ -21,3 +21,4 @@ Teraz możemy uruchomić aplikacje poprzez link podany tutaj.
 # Website:
 [Live demo](e-commerce-bsc-thesis.netlify.app)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ba695aca-cd5b-429e-a34d-cae30d29b0a4/deploy-status)](https://app.netlify.com/sites/e-commerce-bsc-thesis/deploys)
+https://e-commerce-bsc-thesis.netlify.app/
