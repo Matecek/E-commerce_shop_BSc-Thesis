@@ -1,7 +1,7 @@
 import { Accordion } from "../Accordion/Accordion";
 import { CenterContent } from "../CenterContent/CenterContent";
 import { FAQ } from "../../const/faq";
-import styles from "./FAQS.module.css";
+import styles from "./FAQs.module.css";
 
 export function FAQs() {
     // Mapujemy dane FAQ, aby pasowały do struktury oczekiwanej przez Accordion
