@@ -17,5 +17,9 @@
         "back-end": "npm run dev --workspace=back-end",
         "dev": "npm-run-all --parallel front-end back-end",
         "server": "node ./back-end/server.js"
+    },
+    "overrides": {
+        "esbuild": "^0.25.0",
+        "nodemailer": "^7.0.13"
     }
 }
